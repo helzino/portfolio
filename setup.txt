@@ -1,0 +1,22 @@
+To run:
+
+Open terminal (at top of page)
+
+run:
+npm install - (no need for this)
+
+npx next build (only run this if next line does not work, then run the next line afer)
+
+npm start or npm run dev 
+
+
+open
+http://localhost:3000
+
+
+To push updates (this mean pushing updates to live)
+open new terminal:
+
+git add .
+git commit -m "Updates made"
+git push origin main
