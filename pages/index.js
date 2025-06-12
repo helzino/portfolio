@@ -52,23 +52,23 @@ export default function Home() {
     <div className={`relative ${data.showCursor && "cursor-none"}`}>
       {data.showCursor && <Cursor />}
       <Head>
-        <title>{data.name} - Zoology Graduate & Filmmaker</title>
+        <title>{data.name} - Zoology Student & Filmmaker</title>
         <meta
           name="description"
-          content="I'm a Zoology graduate and filmmaker with a passion for bringing the natural world to life through storytelling. From capturing breathtaking drone footage to diving into marine research, my work is all about inspiring others to connect with our planet. I thrive on new challenges, whether it's trekking with camera gear to remote locations or translating complex science into captivating stories. My mission? To share the wonder of wildlife and spark a sense of adventure and conservation in every audience I reach."
+          content="I'm a Zoology Student and filmmaker with a passion for bringing the natural world to life through storytelling. From capturing breathtaking drone footage to diving into marine research, my work is all about inspiring others to connect with our planet. I thrive on new challenges, whether it's trekking with camera gear to remote locations or translating complex science into captivating stories. My mission? To share the wonder of wildlife and spark a sense of adventure and conservation in every audience I reach."
         />
-        <meta property="og:title" content={`${data.name} - Zoology Graduate & Filmmaker`} />
+        <meta property="og:title" content={`${data.name} - Zoology Student & Filmmaker`} />
         <meta
           property="og:description"
-          content="I'm a Zoology graduate and filmmaker with a passion for bringing the natural world to life through storytelling. From capturing breathtaking drone footage to diving into marine research, my work is all about inspiring others to connect with our planet. I thrive on new challenges, whether it's trekking with camera gear to remote locations or translating complex science into captivating stories. My mission? To share the wonder of wildlife and spark a sense of adventure and conservation in every audience I reach."
+          content="I'm a Zoology Student and filmmaker with a passion for bringing the natural world to life through storytelling. From capturing breathtaking drone footage to diving into marine research, my work is all about inspiring others to connect with our planet. I thrive on new challenges, whether it's trekking with camera gear to remote locations or translating complex science into captivating stories. My mission? To share the wonder of wildlife and spark a sense of adventure and conservation in every audience I reach."
         />
         <meta property="og:image" content="/favicon.ico" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${data.name} - Zoology Graduate & Filmmaker`} />
+        <meta name="twitter:title" content={`${data.name} - Zoology Student & Filmmaker`} />
         <meta
           name="twitter:description"
-          content="I'm a Zoology graduate and filmmaker with a passion for bringing the natural world to life through storytelling. From capturing breathtaking drone footage to diving into marine research, my work is all about inspiring others to connect with our planet. I thrive on new challenges, whether it's trekking with camera gear to remote locations or translating complex science into captivating stories. My mission? To share the wonder of wildlife and spark a sense of adventure and conservation in every audience I reach."
+          content="I'm a Zoology Student and filmmaker with a passion for bringing the natural world to life through storytelling. From capturing breathtaking drone footage to diving into marine research, my work is all about inspiring others to connect with our planet. I thrive on new challenges, whether it's trekking with camera gear to remote locations or translating complex science into captivating stories. My mission? To share the wonder of wildlife and spark a sense of adventure and conservation in every audience I reach."
         />
         <meta name="twitter:image" content="/favicon.ico" />
         <link rel="icon" href="/favicon.ico" />
