@@ -20,3 +20,11 @@ open new terminal:
 git add .
 git commit -m "Updates made"
 git push origin main
+
+To change images:
+1. open public folder in vs code
+2. reveal in file 
+3. drag a compressed image into file explorer
+4. update url on front end (case sensitive)
+
+Exiting visual studio: if dot > press control s
