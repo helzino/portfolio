@@ -14,7 +14,17 @@ import Cursor from "../components/Cursor";
 // Local Data
 import data from "../data/portfolio.json";
 
+const getProjects = () => {
+  try {
+    const env = process.env.NEXT_PUBLIC_PROJECTS;
+    return env ? JSON.parse(env) : data.projects;
+  } catch {
+    return data.projects;
+  }
+};
+
 export default function Home() {
+  const projects = getProjects();
   // Ref
   const workRef = useRef();
   const aboutRef = useRef();
@@ -120,7 +130,7 @@ export default function Home() {
           <h1 className="text-2xl text-bold m-2">Captured Moments.</h1>
 
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
-            {(process.env.NEXT_PUBLIC_PROJECTS ? JSON.parse(process.env.NEXT_PUBLIC_PROJECTS) : data.projects).map((project) => (
+            {projects.map((project) => (
               <WorkCard
                 key={project.id}
                 img={project.imageSrc}
