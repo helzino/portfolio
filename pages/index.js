@@ -120,7 +120,7 @@ export default function Home() {
           <h1 className="text-2xl text-bold m-2">Captured Moments.</h1>
 
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
-            {data.projects.map((project) => (
+            {(process.env.NEXT_PUBLIC_PROJECTS ? JSON.parse(process.env.NEXT_PUBLIC_PROJECTS) : data.projects).map((project) => (
               <WorkCard
                 key={project.id}
                 img={project.imageSrc}
@@ -132,7 +132,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0 ml0">
+        <hr className="my-16 laptop:my-24 border-t border-gray-200 dark:border-gray-700 opacity-40" />
+
+        <div className="p-2 laptop:p-0 ml0">
           <h1 className="tablet:m-10 text-2xl text-bold ml5">My Toolkit.</h1>
           <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6 ml0">
             {data.services.map((service, index) => (
@@ -152,7 +154,9 @@ export default function Home() {
             </Link>
           </div>
         )}
-        <div className="mt-8 laptop:mt-40 p-2 laptop:p-0 ml0" ref={aboutRef}>
+        <hr className="my-16 laptop:my-24 border-t border-gray-200 dark:border-gray-700 opacity-40" />
+
+        <div className="p-2 laptop:p-0 ml0" ref={aboutRef}>
           <h1 className="tablet:m-10 text-2xl text-bold ml0">About.</h1>
           <p className="tablet:m-10 mt-2 text-xl mr-2 laptop:text-3xl w-full laptop:w-5/5 ml0">
             {data.aboutpara}

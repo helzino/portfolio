@@ -20,12 +20,11 @@ const WorkCard = ({ img, name, description, onClick }) => {
         onClick={handleImageClick}
       >
         <div
-          className="relative rounded-lg overflow-hidden transition-all ease-out duration-300 h-48 mob:h-auto"
-          style={{ height: "600px" }}
+          className="relative rounded-lg overflow-hidden transition-all ease-out duration-300 laptop:h-[600px]"
         >
           <img
             alt={name}
-            className="h-full w-full object-cover hover:scale-110 transition-all ease-out duration-300"
+            className="w-full object-contain laptop:object-cover laptop:h-full hover:scale-110 transition-all ease-out duration-300"
             src={img}
           />
         </div>
@@ -41,7 +40,7 @@ const WorkCard = ({ img, name, description, onClick }) => {
         isOpen={isModalOpen}
         onRequestClose={closeModal}
         style={{
-          overlay: { backgroundColor: "rgba(0, 0, 0, 0.75)" },
+          overlay: { backgroundColor: "rgba(0, 0, 0, 0.85)", zIndex: 1000 },
           content: {
             top: "50%",
             left: "50%",
@@ -53,25 +52,27 @@ const WorkCard = ({ img, name, description, onClick }) => {
             border: "none",
             borderRadius: "10px",
             overflow: "hidden",
+            background: "transparent",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            maxWidth: "100%", // Limit the modal width to 90% of the viewport width
-            maxHeight: "90vh", // Limit the modal height to 90% of the viewport height
+            maxWidth: "90vw",
+            maxHeight: "90vh",
           },
         }}
         ariaHideApp={false}
       >
-        <div style={{ maxWidth: "100%", maxHeight: "100%", overflow: "hidden" }}>
+        <div style={{ maxWidth: "90vw", maxHeight: "90vh", overflow: "hidden", borderRadius: "10px" }}>
           <img
             src={img}
             alt={name}
             style={{
-              maxWidth: "100%",
-              maxHeight: "100%",
+              maxWidth: "90vw",
+              maxHeight: "90vh",
               width: "auto",
               height: "auto",
-              objectFit: "contain", // Keeps image aspect ratio
+              display: "block",
+              imageOrientation: "from-image",
             }}
           />
         </div>

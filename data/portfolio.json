@@ -1,1 +1,95 @@
-{"name":"Helena","headerTaglineOne":"Hello ","headerTaglineTwo":"I'm Helena,","headerTaglineThree":"Filmmaker &  Zoologist ","headerTaglineFour":" Based in London, UK","showCursor":true,"showBlog":true,"darkMode":true,"showResume":false,"socials":[{"id":"2","title":"LinkedIn","link":"https://www.linkedin.com/in/helena-wreford-2500971b1/"},{"id":"4","title":"Instagram","link":"https://www.instagram.com/helswreford/?hl=en"},{"id":"5","title":"Email","link":"mailto:helenawreford@live.com"}],"projects":[{"id":"1","title":"Hanging In There","description":"A Pipevine Swallowtail, captured in the Philippines.","imageSrc":"/images/butterfly.jpg","url":"/blog/philippines"},{"id":"2","title":"Spotted Something","description":"A Puffin, captured on Skomer Island, UK.","imageSrc":"/images/PUFFIN.jpg","url":"/blog/costarica"},{"id":"3","title":"Morning Commute ","description":"A Working Yak, captured in Nepal.","imageSrc":"/images/YAK.JPG","url":"/blog/nepal"},{"id":"4","title":"Conflicting Contrasts","description":"A Gentle Irruption, captured in Guatemala. ","imageSrc":"/images/VOLCANO.JPG","url":"/blog/costarica"},{"id":"5","title":"What's The Gossip","description":"Two local girls catching up on the towns gossip, captured in Nepal. ","imageSrc":"/images/GIRLS.JPG","url":"/blog/nepal"},{"id":"6","title":"Yin & Yang","description":"The perfect balance, captured in Croatia. ","imageSrc":"/images/FISH.JPG","url":"/blog/nepal"}],"services":[{"id":"1","title":"BSc Zoology","description":"Studying Zoology at the University of Bristol, I’ve explored everything from animal communication and behaviour to the impact of artificial light on marine life, blending my passion for wildlife with a strong foundation in scientific research."},{"id":"2","title":"Photography + Camera Operation","description":"I'm a passionate photographer and camera operator, capturing the beauty of wildlife, landscapes, and the people I meet along the way. An accredited Sony VENICE 2 operator, I also have hands-on kit room experience rigging and operating a range of cameras including RED, FX6, and Sony A7s, as well as DJI Ronins for shoots."},{"id":"3","title":"Drone Pilot","description":"As a certified A2CofC drone pilot, I’ve navigated diverse landscapes to capture stunning aerial footage, from the rugged cliffs of Skomer Island to the vibrant streets of Bristol. Whether it's for wildlife documentaries or creative projects, I love using my drone to provide a fresh perspective and bring stories to life from above."},{"id":"4","title":"Story Telling","description":"Storytelling is at the heart of everything I do - whether I’m behind the camera or developing ideas within a production company. I believe in the power of stories to connect people with the natural world, spark curiosity, and inspire action. My aim is to seek out adventurous subjects and turn each narrative into a journey that truly resonates with audiences."}],"aboutpara":"I'm a Zoologist and TV researcher with a passion for bringing the natural world to life through storytelling. From Everest base camp to diving 40 meters underwater, I thrive in extreme environments and live for new challenges. My mission? To connect audiences with the natural and cultural wonders of our planet, sparking a sense of adventure and conservation in every audience I reach.","resume":{"tagline":"👋  I’m a passionate filmmaker, wildlife enthusiast, and storyteller.","description":"With a Zoology degree from the University of Bristol and hands-on experience in creating captivating content, I’m all about bringing the wonders of nature to life. Skilled in filming, drone piloting, and photography, I’ve produced films that highlight the beauty and challenges of our planet.","experiences":[{"id":"1","dates":"September 2024 - Present","type":"Part Time","position":"Researcher at WildReach Productions","bullets":"Pitching fresh story ideas focused on human-wildlife relationships, Engaging with contributors to uncover unique narratives for upcoming films"},{"id":"d495c23b-4f65-479a-9b8a-cfbc1c089725","dates":"July 2021 - June 2022","type":"Full Time","position":"Drone Pilot, Researcher, Editor for ‘Bristol: A Hidden Eden’","bullets":"Brought this Wildlife Film Society project to life through aerial footage and thorough research"},{"id":"1e1b641c-40a9-4c02-b31b-4b4835bc2a6d","dates":"March 2021 - June 2021","type":"Full Time","position":"Content Creator at Dreamsea Surf Camp, Costa Rica","bullets":"Lived on-site for 2 months, creating content and managing social media, Filmed, photographed, and crafted stories for an audience of 50K+"}],"education":{"universityName":"The University of Bristol","universityDate":"BSc Zoology | September 2021 - June 2024","universityPara":"Explored animal communication, marine ecology, and more with a focus on making science accessible and engaging. Dissertation: ‘The impact of artificial light at night on marine aquatic species’. Vice-President for the Wildlife Film Society, leading talks, workshops, and inclusivity efforts."},"languages":["Photography & Videography","Creative Software","Scuba Diving","Scriptwriting","Climbing"],"frameworks":["Communicating Science Through Filmmaking Winner, judged by BBC PE3 producers","Future Leap Wildlife Photographer Exhibition Shortlisted and displayed"],"others":[]}}
+{
+  "name": "Helena",
+  "headerTaglineOne": "Hello ",
+  "headerTaglineTwo": "I'm Helena,",
+  "headerTaglineThree": "Filmmaker &  Zoologist ",
+  "headerTaglineFour": " Based in London, UK",
+  "showCursor": true,
+  "showBlog": true,
+  "darkMode": true,
+  "showResume": false,
+  "socials": [
+    {
+      "id": "2",
+      "title": "LinkedIn",
+      "link": "https://www.linkedin.com/in/helena-wreford-2500971b1/"
+    },
+    {
+      "id": "4",
+      "title": "Instagram",
+      "link": "https://www.instagram.com/helswreford/?hl=en"
+    },
+    {
+      "id": "5",
+      "title": "Email",
+      "link": "mailto:helenawreford@live.com"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "title": "BSc Zoology",
+      "description": "Studying Zoology at the University of Bristol, I’ve explored everything from animal communication and behaviour to the impact of artificial light on marine life, blending my passion for wildlife with a strong foundation in scientific research."
+    },
+    {
+      "id": "2",
+      "title": "Photography + Camera Operation",
+      "description": "I'm a passionate photographer and camera operator, capturing the beauty of wildlife, landscapes, and the people I meet along the way. An accredited Sony VENICE 2 operator, I also have hands-on kit room experience rigging and operating a range of cameras including RED, FX6, and Sony A7s, as well as DJI Ronins for shoots."
+    },
+    {
+      "id": "3",
+      "title": "Drone Pilot",
+      "description": "As a certified A2CofC drone pilot, I’ve navigated diverse landscapes to capture stunning aerial footage, from the rugged cliffs of Skomer Island to the vibrant streets of Bristol. Whether it's for wildlife documentaries or creative projects, I love using my drone to provide a fresh perspective and bring stories to life from above."
+    },
+    {
+      "id": "4",
+      "title": "Story Telling",
+      "description": "Storytelling is at the heart of everything I do - whether I’m behind the camera or developing ideas within a production company. I believe in the power of stories to connect people with the natural world, spark curiosity, and inspire action. My aim is to seek out adventurous subjects and turn each narrative into a journey that truly resonates with audiences."
+    }
+  ],
+  "aboutpara": "I'm building my career in factual TV, working on natural history and adventure content that connects people with our planet. I've worked for National Geographic and Plimsoll Productions on content for both traditional TV and YouTube, combining my Zoology degree from the University of Bristol with a love for wildlife and adventure filmmaking. Whether it's showcasing incredible animals, cultures or following humans pushing the limits of what's possible, I'm driven by one thing: sharing the stories that help people connect with the world around them.",
+  "resume": {
+    "tagline": "👋  I’m a passionate filmmaker, wildlife enthusiast, and storyteller.",
+    "description": "With a Zoology degree from the University of Bristol and hands-on experience in creating captivating content, I’m all about bringing the wonders of nature to life. Skilled in filming, drone piloting, and photography, I’ve produced films that highlight the beauty and challenges of our planet.",
+    "experiences": [
+      {
+        "id": "1",
+        "dates": "September 2024 - Present",
+        "type": "Part Time",
+        "position": "Researcher at WildReach Productions",
+        "bullets": "Pitching fresh story ideas focused on human-wildlife relationships, Engaging with contributors to uncover unique narratives for upcoming films"
+      },
+      {
+        "id": "d495c23b-4f65-479a-9b8a-cfbc1c089725",
+        "dates": "July 2021 - June 2022",
+        "type": "Full Time",
+        "position": "Drone Pilot, Researcher, Editor for ‘Bristol: A Hidden Eden’",
+        "bullets": "Brought this Wildlife Film Society project to life through aerial footage and thorough research"
+      },
+      {
+        "id": "1e1b641c-40a9-4c02-b31b-4b4835bc2a6d",
+        "dates": "March 2021 - June 2021",
+        "type": "Full Time",
+        "position": "Content Creator at Dreamsea Surf Camp, Costa Rica",
+        "bullets": "Lived on-site for 2 months, creating content and managing social media, Filmed, photographed, and crafted stories for an audience of 50K+"
+      }
+    ],
+    "education": {
+      "universityName": "The University of Bristol",
+      "universityDate": "BSc Zoology | September 2021 - June 2024",
+      "universityPara": "Explored animal communication, marine ecology, and more with a focus on making science accessible and engaging. Dissertation: ‘The impact of artificial light at night on marine aquatic species’. Vice-President for the Wildlife Film Society, leading talks, workshops, and inclusivity efforts."
+    },
+    "languages": [
+      "Photography & Videography",
+      "Creative Software",
+      "Scuba Diving",
+      "Scriptwriting",
+      "Climbing"
+    ],
+    "frameworks": [
+      "Communicating Science Through Filmmaking Winner, judged by BBC PE3 producers",
+      "Future Leap Wildlife Photographer Exhibition Shortlisted and displayed"
+    ],
+    "others": []
+  }
+}
