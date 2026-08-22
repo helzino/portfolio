@@ -32,6 +32,7 @@ export const defaultAbout = {
   body: [
     "I graduated from the University of Bristol with a BSc in Zoology, writing my dissertation on the impact of artificial light at night on marine species, and serving as Vice-President of the Wildlife Film Society.",
     "Since then I have worked as a researcher, drone pilot, camera operator and editor, from the cliffs of Skomer Island to the surf coast of Costa Rica, most recently training on Sony VENICE 2 cameras in virtual production.",
+    "I have made work for National Geographic and Plimsoll Productions, for traditional broadcast and for YouTube, building a career in factual television around natural history and adventure.",
     "I care about making science feel close enough to touch: films and photographs that give an audience a reason to look twice, and then to look after.",
   ],
   quote:
@@ -43,7 +44,7 @@ export const defaultCapabilities: Capability[] = [
   {
     title: "Direction & Camera",
     description:
-      "Shooting on Sony A7 IV and VENICE 2, from observational wildlife sequences to interview-led documentary.",
+      "Shooting on Sony A7 IV and VENICE 2, from observational wildlife sequences to interview-led documentary. Kit room experience rigging and operating RED, FX6 and Sony A7S bodies, and DJI Ronin gimbals on shoots.",
   },
   {
     title: "Aerial (A2 CofC)",
@@ -53,7 +54,7 @@ export const defaultCapabilities: Capability[] = [
   {
     title: "Underwater",
     description:
-      "Qualified diver shooting marine subjects, with a research background in marine ecology.",
+      "Qualified scuba diver shooting marine subjects, with a research background in marine ecology.",
   },
   {
     title: "Research & Story",
@@ -235,5 +236,54 @@ export const defaultPhotos: Photo[] = [
     year: "2023",
     src: "/images/fish.jpg",
     caption: "The perfect balance, found underwater.",
+  },
+  {
+    id: "7",
+    title: "Tiny Forest Takeover",
+    location: "Australia",
+    year: "",
+    src: "/images/mushrooms.jpg",
+    caption:
+      "Bright red mushrooms clustering along the twisted roots of an old tree.",
+  },
+  {
+    id: "8",
+    title: "Mountain Companions",
+    location: "Nepal",
+    year: "",
+    src: "/images/nepal.jpg",
+    caption: "Yaks and their owner beneath snow-covered Himalayan giants.",
+  },
+  {
+    id: "9",
+    title: "Still Waters",
+    location: "Slovenia",
+    year: "",
+    src: "/images/island.jpg",
+    caption: "Lake Bled's island church, surrounded by alpine scenery.",
+  },
+  {
+    id: "10",
+    title: "Nemo & Co",
+    location: "Philippines",
+    year: "",
+    src: "/images/clown-fish.jpg",
+    caption: "A family of clown fish protecting their eggs.",
+  },
+  {
+    id: "11",
+    title: "Lost in Thought",
+    location: "Nepal",
+    year: "",
+    src: "/images/monkey.jpg",
+    caption: "A monkey perched on the steps in Kathmandu.",
+  },
+  {
+    id: "12",
+    title: "Built for the Cloud Line",
+    location: "Peru",
+    year: "",
+    src: "/images/south-america.jpg",
+    caption: "Terraces stepping down from Machu Picchu, Huayna Picchu behind.",
   },
 ];
