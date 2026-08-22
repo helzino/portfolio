@@ -71,7 +71,7 @@ NEXT_PUBLIC_PHOTO_1="Hanging In There | Philippines | 2023 | /images/butterfly.j
 | Variable | What it is |
 | --- | --- |
 | `NEXT_PUBLIC_SITE_NAME` | Your name, used in the header monogram, titles and footer |
-| `NEXT_PUBLIC_SITE_ROLE` | e.g. "Filmmaker & Photographer" |
+| `NEXT_PUBLIC_SITE_ROLE` | e.g. "Filmmaker & Zoologist" |
 | `NEXT_PUBLIC_SITE_TAGLINE` | One sentence, shown top-right of the opening screen |
 | `NEXT_PUBLIC_SITE_LOCATION` | e.g. "London, United Kingdom" |
 | `NEXT_PUBLIC_SITE_EMAIL` | The address behind every "Contact" link |

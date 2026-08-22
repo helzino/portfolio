@@ -62,7 +62,7 @@ The variables worth setting first:
 
 ```
 NEXT_PUBLIC_SITE_NAME          Helena Wreford
-NEXT_PUBLIC_SITE_ROLE          Filmmaker & Photographer
+NEXT_PUBLIC_SITE_ROLE          Filmmaker & Zoologist
 NEXT_PUBLIC_SITE_TAGLINE       Wildlife storytelling for screen and print…
 NEXT_PUBLIC_SITE_LOCATION      London, United Kingdom
 NEXT_PUBLIC_SITE_EMAIL         helenawreford@live.com

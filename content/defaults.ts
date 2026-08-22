@@ -7,7 +7,7 @@ import type { Award, Capability, Film, Photo, TimelineEntry } from "@/config/typ
 
 export const defaultSite = {
   name: "Helena Wreford",
-  role: "Filmmaker & Photographer",
+  role: "Filmmaker & Zoologist",
   tagline:
     "Wildlife storytelling for screen and print, by a zoologist behind the camera.",
   location: "London, United Kingdom",
