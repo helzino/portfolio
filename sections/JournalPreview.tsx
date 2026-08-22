@@ -22,14 +22,16 @@ export function JournalPreview({ posts }: { posts: JournalPost[] }) {
           {posts.slice(0, 2).map((post) => (
             <li key={post.slug}>
               <Link href={`/journal/${post.slug}`} className="journal-row group" data-cursor="read">
-                <div className="journal-row-media">
-                  <Frame
-                    src={post.image}
-                    alt=""
-                    ratio={16 / 10}
-                    sizes="(max-width: 900px) 90vw, 30vw"
-                  />
-                </div>
+                {post.image && (
+                  <div className="journal-row-media">
+                    <Frame
+                      src={post.image}
+                      alt=""
+                      ratio={16 / 10}
+                      sizes="(max-width: 900px) 90vw, 30vw"
+                    />
+                  </div>
+                )}
                 <div className="journal-row-body">
                   <span className="meta meta-dim">{formatPostDate(post.date)}</span>
                   <h3 className="display display-sm">{post.title}</h3>

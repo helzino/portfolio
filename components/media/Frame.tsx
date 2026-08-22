@@ -27,6 +27,9 @@ export function Frame({
   quality?: number;
   position?: string;
 }) {
+  // No source means no frame: an empty src renders a broken box in the browser.
+  if (!src) return null;
+
   const meta = getMedia(src);
   const resolved =
     ratio === "auto"
