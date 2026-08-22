@@ -47,7 +47,7 @@ NEXT_PUBLIC_PHOTO_1="Hanging In There | Philippines | 2023 | /images/butterfly.j
 - Leave a field empty if you don't want it: `Title | | 2024 | /images/x.jpg |`
 
 **Images** can be either:
-- a file in this repository: `/images/PUFFIN.jpg`
+- a file in this repository: `/images/puffin.jpg`
 - any web address: `https://…/photo.jpg`
 
 ---

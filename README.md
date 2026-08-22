@@ -69,7 +69,7 @@ NEXT_PUBLIC_SITE_EMAIL         helenawreford@live.com
 NEXT_PUBLIC_SITE_URL           https://helenawreford.com
 NEXT_PUBLIC_SITE_AVAILABILITY  Available for commissions and crew work
 NEXT_PUBLIC_HERO_HEADLINE      Helena / Wreford
-NEXT_PUBLIC_HERO_IMAGE         /images/PUFFIN.jpg
+NEXT_PUBLIC_HERO_IMAGE         /images/puffin.jpg
 NEXT_PUBLIC_SOCIAL_INSTAGRAM   https://www.instagram.com/helswreford/
 NEXT_PUBLIC_SOCIAL_LINKEDIN    https://www.linkedin.com/in/hels-wreford-2500971b1/
 ```

@@ -15,7 +15,7 @@ export const defaultSite = {
   url: "https://helenawreford.com",
   availability: "Available for commissions and crew work",
   heroHeadline: ["Helena", "Wreford"],
-  heroImage: "/images/PUFFIN.jpg",
+  heroImage: "/images/puffin.jpg",
 };
 
 export const defaultSocials = [
@@ -36,7 +36,7 @@ export const defaultAbout = {
   ],
   quote:
     "The goal is never the animal in frame. It is the moment somebody decides they care about it.",
-  portrait: "/images/GIRLS.jpg",
+  portrait: "/images/girls.jpg",
 };
 
 export const defaultCapabilities: Capability[] = [
@@ -132,8 +132,8 @@ export const defaultFilms: Film[] = [
     format: "Documentary short",
     description:
       "A city read as an ecosystem: peregrines on tower blocks, foxes on terraces, and the green corridors nobody notices.",
-    poster: "/images/PUFFIN.jpg",
-    stills: ["/images/VOLCANO.jpg", "/images/FISH.jpg"],
+    poster: "/images/puffin.jpg",
+    stills: ["/images/volcano.jpg", "/images/fish.jpg"],
     body: [
       "Produced with the University of Bristol Wildlife Film Society, Bristol: A Hidden Eden looks for wilderness inside a city that assumes it has none.",
       "I flew the aerial sequences, ran the research and cut the film, mapping the routes urban animals take through Bristol, then finding the light that made those routes visible on screen.",
@@ -163,8 +163,8 @@ export const defaultFilms: Film[] = [
     format: "Development, WildReach Productions",
     description:
       "Ongoing development research into the relationships people build with the animals they live alongside.",
-    poster: "/images/YAK.jpg",
-    stills: ["/images/GIRLS.jpg"],
+    poster: "/images/yak.jpg",
+    stills: ["/images/girls.jpg"],
     body: [
       "Development work for WildReach Productions: pitching story ideas built around the relationships between people and wildlife, and speaking to contributors to find the ones worth filming.",
       "The research runs ahead of the camera. The strongest sequences usually exist as a conversation months before they exist as a shot.",
@@ -178,7 +178,7 @@ export const defaultFilms: Film[] = [
     format: "Branded social campaign",
     description:
       "Two months on the Pacific coast filming, photographing and writing for a surf camp's 50,000-strong audience.",
-    poster: "/images/FISH.jpg",
+    poster: "/images/fish.jpg",
     stills: ["/images/butterfly.jpg"],
     body: [
       "Living on site for two months, I shot and cut daily content (surf, jungle, the people passing through) and managed the channels it went out on.",
@@ -201,7 +201,7 @@ export const defaultPhotos: Photo[] = [
     title: "Spotted Something",
     location: "Skomer Island, Wales",
     year: "2023",
-    src: "/images/PUFFIN.jpg",
+    src: "/images/puffin.jpg",
     caption: "A puffin on the cliff edge, seconds before the burrow run.",
   },
   {
@@ -209,7 +209,7 @@ export const defaultPhotos: Photo[] = [
     title: "Morning Commute",
     location: "Nepal",
     year: "2022",
-    src: "/images/YAK.jpg",
+    src: "/images/yak.jpg",
     caption: "A working yak on the trail above the treeline.",
   },
   {
@@ -217,7 +217,7 @@ export const defaultPhotos: Photo[] = [
     title: "Conflicting Contrasts",
     location: "Guatemala",
     year: "2022",
-    src: "/images/VOLCANO.jpg",
+    src: "/images/volcano.jpg",
     caption: "A gentle eruption, watched from a ridge at first light.",
   },
   {
@@ -225,7 +225,7 @@ export const defaultPhotos: Photo[] = [
     title: "What's The Gossip",
     location: "Nepal",
     year: "2022",
-    src: "/images/GIRLS.jpg",
+    src: "/images/girls.jpg",
     caption: "Two girls catching up on the news of the town.",
   },
   {
@@ -233,7 +233,7 @@ export const defaultPhotos: Photo[] = [
     title: "Yin & Yang",
     location: "Croatia",
     year: "2023",
-    src: "/images/FISH.jpg",
+    src: "/images/fish.jpg",
     caption: "The perfect balance, found underwater.",
   },
 ];
