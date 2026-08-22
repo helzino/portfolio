@@ -1,0 +1,37 @@
+{
+  "/images/FISH.jpg": {
+    "width": 2044,
+    "height": 1481,
+    "blurDataURL": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAACwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JQAAFnYKjbIt/c81UAAD+jYVK2QErzr5aPUVSV7AKDaYEOdXmKTppi9vPR9xF+pisBzbve5r53Xbo6N52bJqJaPihXcOaN0c6jFgzWXbtlRXE/IgAAA=="
+  },
+  "/images/GIRLS.jpg": {
+    "width": 2044,
+    "height": 1363,
+    "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JYwCdMoAByoJO4OnbIAD52Qix6EnblTRIEBcau6bvK2svE4gqRo0gI3T+s3n1QJ/EG5QQO1QKyKPGRF7FY3A9FprtXsM2GAA="
+  },
+  "/images/PUFFIN.jpg": {
+    "width": 2044,
+    "height": 1363,
+    "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAABwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JYgAAUoAGnhvn9EAA/FFgOe+v0azkbIlgolZwhLgQqSWcfsOE+I//0rnnXIBv8HIrplOnt9oAAA=="
+  },
+  "/images/VOLCANO.jpg": {
+    "width": 1363,
+    "height": 2044,
+    "blurDataURL": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAACQBQCdASoUAB4APu1krFAppSQisBgIATAdiWcAvVg0b7kJFSmOd9rvaa+Mv5yMc+o2q1xewAD+3q8swMDZctcpGYUjV8+vlsIpAJQvOW32SZYyQZQcs4HTrdPkwLrOFSIxJsxgNq0qkl0buX+QG2NCSvZSOVc+HbRlvB8/76H36Uqw/6y2m64g7pR2wwQmWI5edcvmr2SgtmoF3AA="
+  },
+  "/images/YAK.jpg": {
+    "width": 1363,
+    "height": 1612,
+    "blurDataURL": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4IMQAAAAQBgCdASoUABgAPu1srFEppaQiqAqpMB2JZgCdMuOCur+G57FNtedMeMXekhBYDJ+0AJhDzOQyvyAAynJYnC5Xdt31km9BNSF0iKvtMiX17QPR30F4LIH1+U/dDAGyv2VY0w+YxwTsAN3cbxcsf6lR5Gf6nNKgElsFpgx5Umd+1G/0qdI8S1tJFPh6R6f47C++CtoMc5VPlvkXadJlgfO9lmc/fvaybQekFlYGuUaJ1bwTsrRFHsgVr1hocKo9Ot1sAAAA"
+  },
+  "/images/butterfly.jpg": {
+    "width": 720,
+    "height": 900,
+    "blurDataURL": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADwAwCdASoUABkAPu1op02ppqOiMBgMATAdiWoAuzNVwMNjzIhyiwAAAPmxr58t5RN/kbZyBt14f37KI10P64S8dRUs+z46PtccQcaxU25B8dP9zTmk113oleLbTH4e7+Jqms4sjaQL/NEdMaAAAA=="
+  },
+  "/images/camera.jpg": {
+    "width": 1600,
+    "height": 900,
+    "blurDataURL": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAADwAwCdASoUAAsAPu1iqU2ppaQiMAgBMB2JZgCdABhoMiuCt/37ScZIAP7xo2xAJQpwDTusFZPSirYBYPC39Br5APO81a+gFeH37Pzh+aVHjQr4ZEuXJziux63F2gvK9bJsPfoMaw6O65hGMlWbfgpyZWOj7YwA"
+  }
+}

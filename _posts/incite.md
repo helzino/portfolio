@@ -3,7 +3,7 @@ date: '2024-10-15T11:50:54.000Z'
 title: INCITE
 tagline: Science Communication for the Modern World.
 preview: >-
-  Launching in 2025, INCITE is my passion project—a science communication platform designed to make complex scientific papers accessible, engaging, and relevant to a broad audience.
+  Launching in 2025, INCITE is my passion project, a science communication platform designed to make complex scientific papers accessible, engaging, and relevant to a broad audience.
 image: >-
   https://images.unsplash.com/photo-1656188505561-19f1a1b6cda8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80
 ---

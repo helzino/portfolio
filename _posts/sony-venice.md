@@ -12,8 +12,8 @@ image: >-
 I am currently participating in a Skills Bootcamp in Virtual Production, with a specific focus on
 training with Sony’s high-end VENICE 2 cameras. It is providing me with a broad understanding
 of virtual production (VP), learning how to seamlessly combine virtual computer-generated
-imagery with live-action footage, gaining hands-on experience in the entire VP pipeline—from
-Unreal Engine and camera tracking to plate playback and real-time content—greatly enhancing
+imagery with live-action footage, gaining hands-on experience in the entire VP pipeline, from
+Unreal Engine and camera tracking to plate playback and real-time content, greatly enhancing
 my technical filmmaking skills.
 
 Throughout the course, I am working with Sony VENICE 2 cameras, mastering their capabilities,
