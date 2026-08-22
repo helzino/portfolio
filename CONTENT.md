@@ -98,6 +98,7 @@ Only the ones you fill in appear. Setting any of them replaces the default set.
 | `NEXT_PUBLIC_ABOUT_BODY` | The story. Paragraphs separated by `\|\|` |
 | `NEXT_PUBLIC_ABOUT_QUOTE` | The large pull quote |
 | `NEXT_PUBLIC_ABOUT_PORTRAIT` | The wide photograph under the title |
+| `NEXT_PUBLIC_ABOUT_QUOTE_IMAGE` | The tall photograph beside the quote |
 
 ### Film & TV: `NEXT_PUBLIC_FILM_1` … `NEXT_PUBLIC_FILM_8`
 
@@ -164,8 +165,11 @@ title: The title
 tagline: One line underneath it.
 preview: >-
   The paragraph shown on the journal index.
-image: /images/camera.jpg
+image: /images/puffin.jpg
 ---
 
 The body of the entry, in Markdown.
 ```
+
+`image` is optional: leave it as `""` and the entry renders without a hero,
+and as a text-only row on the journal index.

@@ -13,10 +13,12 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  // A photograph to sit against the quote, never the same frame as the portrait
-  // directly above it.
+  // A photograph to sit against the quote, set in content and matched back to
+  // its caption; falls back to any frame that is not the portrait above.
   const quoteImage =
-    site.photos.find((photo) => photo.src !== site.about.portrait) ?? site.photos[0];
+    site.photos.find((photo) => photo.src === site.about.quoteImage) ??
+    site.photos.find((photo) => photo.src !== site.about.portrait) ??
+    site.photos[0];
 
   return (
     <>

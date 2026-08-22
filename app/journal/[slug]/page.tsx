@@ -19,7 +19,11 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   return {
     title: post.title,
     description: post.preview,
-    openGraph: { title: post.title, description: post.preview, images: [post.image] },
+    openGraph: {
+      title: post.title,
+      description: post.preview,
+      ...(post.image ? { images: [post.image] } : {}),
+    },
   };
 }
 
@@ -38,9 +42,11 @@ export default async function JournalEntryPage({ params }: Params) {
         <p className="lede note-tagline">{post.tagline}</p>
       </header>
 
-      <div className="note-media">
-        <Frame src={post.image} alt="" ratio={16 / 9} sizes="100vw" priority />
-      </div>
+      {post.image && (
+        <div className="note-media">
+          <Frame src={post.image} alt="" ratio={16 / 9} sizes="100vw" priority />
+        </div>
+      )}
 
       <div
         className="shell note-body markdown"

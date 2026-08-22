@@ -20,7 +20,11 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   return {
     title: film.title,
     description: film.description,
-    openGraph: { title: film.title, description: film.description, images: [film.poster] },
+    openGraph: {
+      title: film.title,
+      description: film.description,
+      ...(film.poster ? { images: [film.poster] } : {}),
+    },
   };
 }
 
@@ -33,17 +37,21 @@ export default async function FilmProjectPage({ params }: Params) {
 
   return (
     <article className="project">
-      <header className="project-hero">
-        <Frame
-          src={film.poster}
-          alt={film.title}
-          ratio="auto"
-          sizes="100vw"
-          priority
-          zoom={false}
-          className="project-hero-media"
-        />
-        <div className="project-hero-scrim" aria-hidden />
+      <header className="project-hero" data-media={Boolean(film.poster)}>
+        {film.poster && (
+          <>
+            <Frame
+              src={film.poster}
+              alt={film.title}
+              ratio="auto"
+              sizes="100vw"
+              priority
+              zoom={false}
+              className="project-hero-media"
+            />
+            <div className="project-hero-scrim" aria-hidden />
+          </>
+        )}
 
         <div className="project-hero-content shell">
           <p className="meta meta-dim">{film.format}</p>

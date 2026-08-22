@@ -67,6 +67,7 @@ export interface SiteContent {
     body: string[];
     quote: string;
     portrait: string;
+    quoteImage: string;
   };
   capabilities: Capability[];
   timeline: TimelineEntry[];

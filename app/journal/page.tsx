@@ -28,14 +28,16 @@ export default async function JournalPage() {
             <li key={post.slug}>
               <Reveal delay={index * 70}>
                 <Link href={`/journal/${post.slug}`} className="journal-entry group" data-cursor="read">
-                  <div className="journal-entry-media">
-                    <Frame
-                      src={post.image}
-                      alt=""
-                      ratio={4 / 3}
-                      sizes="(max-width: 900px) 90vw, 28vw"
-                    />
-                  </div>
+                  {post.image && (
+                    <div className="journal-entry-media">
+                      <Frame
+                        src={post.image}
+                        alt=""
+                        ratio={4 / 3}
+                        sizes="(max-width: 900px) 90vw, 28vw"
+                      />
+                    </div>
+                  )}
                   <div className="journal-entry-body">
                     <span className="meta meta-dim">{formatPostDate(post.date)}</span>
                     <h2 className="display display-md">{post.title}</h2>

@@ -1326,6 +1326,13 @@ video {
   overflow: hidden;
 }
 
+/* Entries without a poster: a text header rather than a tall empty frame. */
+.project-hero[data-media="false"] {
+  height: auto;
+  min-height: 0;
+  padding-top: clamp(7rem, 20vh, 12rem);
+}
+
 .project-hero-media,
 .project-hero-media img {
   position: absolute;
@@ -1819,6 +1826,11 @@ video {
 
 .journal-list li:last-child .journal-entry {
   border-bottom: var(--rule) solid var(--color-line);
+}
+
+/* Posts without an image: the body takes the full row. */
+.journal-entry-body:only-child {
+  grid-column: 1 / -1;
 }
 
 .journal-entry-body {

@@ -168,6 +168,7 @@ export const site: SiteContent = {
     body: aboutBody ? paragraphs(aboutBody) : defaultAbout.body,
     quote: read("NEXT_PUBLIC_ABOUT_QUOTE") ?? defaultAbout.quote,
     portrait: read("NEXT_PUBLIC_ABOUT_PORTRAIT") ?? defaultAbout.portrait,
+    quoteImage: read("NEXT_PUBLIC_ABOUT_QUOTE_IMAGE") ?? defaultAbout.quoteImage,
   },
   capabilities: envCapabilities.length > 0 ? envCapabilities : defaultCapabilities,
   timeline: envTimeline.length > 0 ? envTimeline : defaultTimeline,

@@ -38,6 +38,9 @@ export const defaultAbout = {
   quote:
     "The goal is never the animal in frame. It is the moment somebody decides they care about it.",
   portrait: "/images/girls.jpg",
+  // Sits beside the quote at 4:5 and renders large, so it wants a sharp,
+  // portrait-orientation frame — not the same one as the portrait above.
+  quoteImage: "/images/monkey.jpg",
 };
 
 export const defaultCapabilities: Capability[] = [
@@ -148,7 +151,7 @@ export const defaultFilms: Film[] = [
     format: "Skills Bootcamp",
     description:
       "Training on Sony's VENICE 2 across the full virtual production pipeline, from Unreal Engine plates to real-time capture.",
-    poster: "/images/camera.jpg",
+    poster: "",
     stills: [],
     link: "https://pro.sony/en_AU/products/digital-cinema-cameras/venice2/",
     body: [
@@ -191,11 +194,11 @@ export const defaultFilms: Film[] = [
 export const defaultPhotos: Photo[] = [
   {
     id: "1",
-    title: "Hanging In There",
+    title: "Highs & Lows",
     location: "Philippines",
     year: "2023",
     src: "/images/butterfly.jpg",
-    caption: "A Pipevine Swallowtail, holding on through the afternoon heat.",
+    caption: "Two birdwings, one settled on a leaf and one still in the air.",
   },
   {
     id: "2",

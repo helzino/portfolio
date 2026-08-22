@@ -1,18 +1,53 @@
 {
+  "/images/butterfly.jpg": {
+    "width": 1440,
+    "height": 1800,
+    "blurDataURL": "data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAACwBACdASoUABkAPu1mq08ppaOiKA1RMB2JZgC3uAp6hzrfFkw6QtImKr8B63mAAP5i2L0YvzrVoZ6hnJ6qKI/IiPFQ9jLsi6pdfCAC+nuqjtX+fiL/DjNTSt9fJsYp+glpU+klklTVVcUNLeHaZmNmqSIsBKDXPOYSnVTiq21gbjpd9NNdBmyTYiLzvp3el+e+klHWWa6jEb3J/wAAAA=="
+  },
+  "/images/clown-fish.jpg": {
+    "width": 3871,
+    "height": 2581,
+    "blurDataURL": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAQBACdASoUAA0APu1iqU2ppaOiMAgBMB2JagCdMoGv/gPHBhXRVpr3YAD+yyBnEF4lnzI3qova8kQpKMFG7+GAi1UrlgC1mbQvY2kWi3p21kHdtiETDYQt6+DjtttezNxFdJ6VIfV8yivmhZXEuObrFPgAAA=="
+  },
   "/images/fish.jpg": {
-    "width": 2044,
-    "height": 1481,
-    "blurDataURL": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAACwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JQAAFnYKjbIt/c81UAAD+jYVK2QErzr5aPUVSV7AKDaYEOdXmKTppi9vPR9xF+pisBzbve5r53Xbo6N52bJqJaPihXcOaN0c6jFgzWXbtlRXE/IgAAA=="
+    "width": 6770,
+    "height": 4904,
+    "blurDataURL": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAACwAwCdASoUAA4APu1iqU2ppaOiMAgBMB2JQAAKki6lRKAsGtr31AD+WIEpRyTghFW4ajuOlP52WIIFHyKIv6b77w2MSokTrtbgR3vc18+4lWJhiKmBS4FTRMKFmJhAjH58Lr0tE50EfiAAAAA="
   },
   "/images/girls.jpg": {
     "width": 2044,
     "height": 1363,
     "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JYwCdMoAByoJO4OnbIAD52Qix6EnblTRIEBcau6bvK2svE4gqRo0gI3T+s3n1QJ/EG5QQO1QKyKPGRF7FY3A9FprtXsM2GAA="
   },
+  "/images/island.jpg": {
+    "width": 3752,
+    "height": 2814,
+    "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAwBACdASoUAA8APu1iqU2ppaOiMAgBMB2JbACdMoR3ACoZzDK0c0v4EQAA/sXZ2odYq9J8gbxohVvZMYXhFbqjunYdX3qV8GmK8UZ0EJ3KYAqkHfHIfAcgpL+3M10jsWT65Mlm/MAAAA=="
+  },
+  "/images/monkey.jpg": {
+    "width": 3681,
+    "height": 4943,
+    "blurDataURL": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAADQBACdASoUABsAPu1qq1EppaOiqAqpMB2JYwC2yAoBqY8MzQ9zGz49SP2oG+/IFgD+7MEqehJsscDyb9FOc2+6ke0mDtMCPXre8sR+/9wSpJZJ6U6acZywTDiabjVk0LkmuQbkw6cE8yHSSYV+IcKIS+0ymCWjiIg3asMZ7AIp/CTOqitNy01D9TIvdSz80mRgJgfgt1fnaIxNWW06FQKgEZPxbwKROViUsaj1R0AX+7wwSVxZr60HAhrVwAAA"
+  },
+  "/images/mushrooms.jpg": {
+    "width": 1008,
+    "height": 1509,
+    "blurDataURL": "data:image/webp;base64,UklGRvgAAABXRUJQVlA4IOwAAABwBgCdASoUAB4APu1sqk8ppqOiMBgIATAdiUATpmmYwFIA64BDr1hNoN/OjMzbVvqlW5QLIcRY7ryE9XgA/hljJJnSJLb/ze3eHKOjNBGImbmaBQbmpc1wp4jvb+b2nDpzSD6bdrn2pdpWlcYpZd056LaHg5Gi7l00gT8NkFEfpY6xZ4NvF31xqMaE1pxvuIYe8tzOfQgluZLZBwzokpXa7CsGN6CURfUNbSn9Ex6Dj/namfzUp1/WsgfnHaBFGupTlqTSfiktqhxKmfsjOyHzHwda9gFb7Bgvgg7cMxZuBR+yO+n8a85CAKIAAA=="
+  },
+  "/images/nepal.jpg": {
+    "width": 3882,
+    "height": 5823,
+    "blurDataURL": "data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAADQBACdASoUAB4APu1qrVCppaQiqAqpMB2JaQAD5Ms3DCV4Dv8b7P0qkpomaLmpAAD+6NmhjiRnQ2HI4wy546nC7Es0QH72hU6KOgcWcJFDJuxAvUYf9MchRB5Pbg8L7QpZtJTbMPwjqaSOq1riL7x07HAkqhpzze7glh7zGq/rIbCFDQG8mE+g+7WmQURXsh54RhFKXro7KSjYNbnVjWnMLPyC4vaCpnJ6K4AAAAA="
+  },
   "/images/puffin.jpg": {
-    "width": 2044,
-    "height": 1363,
-    "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAABwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JYgAAUoAGnhvn9EAA/FFgOe+v0azkbIlgolZwhLgQqSWcfsOE+I//0rnnXIBv8HIrplOnt9oAAA=="
+    "width": 1440,
+    "height": 959,
+    "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JYgDG9CHKCkQt4IIioAAA/cn/7KjEHxEgOhQSxnZVYeuLKQbSBq5MBWN7vEVfJiaUQzMaQsm7UoplIAA="
+  },
+  "/images/south-america.jpg": {
+    "width": 4672,
+    "height": 7008,
+    "blurDataURL": "data:image/webp;base64,UklGRtoAAABXRUJQVlA4IM4AAACwBQCdASoUAB4APu1mqk2ppaQiMAgBMB2JZQC7IUPDBN5YGSjh0+/YZbj/Ea+Vk2LRW9GpXIAA/up1q0PjF73oTqMbEEE4z5K+1BPCzCBHkbVAQYgWXbar26EPYu7yhq78EWG/M6yJArdMyioFry+8+xi55Ks86p20xlurOdRWwKGa7ku8HkQJOIQXYqHTh0EI7LQfyvrFJ0Oub3Hpm95SA2f23rAZs/rN1dgJtsUZKfcdrnPH9krqjNSO+rzpXlt3oD6gErW9/FAdcAAAAA=="
   },
   "/images/volcano.jpg": {
     "width": 1363,
@@ -23,15 +58,5 @@
     "width": 1363,
     "height": 1612,
     "blurDataURL": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4IMQAAAAQBgCdASoUABgAPu1srFEppaQiqAqpMB2JZgCdMuOCur+G57FNtedMeMXekhBYDJ+0AJhDzOQyvyAAynJYnC5Xdt31km9BNSF0iKvtMiX17QPR30F4LIH1+U/dDAGyv2VY0w+YxwTsAN3cbxcsf6lR5Gf6nNKgElsFpgx5Umd+1G/0qdI8S1tJFPh6R6f47C++CtoMc5VPlvkXadJlgfO9lmc/fvaybQekFlYGuUaJ1bwTsrRFHsgVr1hocKo9Ot1sAAAA"
-  },
-  "/images/butterfly.jpg": {
-    "width": 720,
-    "height": 900,
-    "blurDataURL": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADwAwCdASoUABkAPu1op02ppqOiMBgMATAdiWoAuzNVwMNjzIhyiwAAAPmxr58t5RN/kbZyBt14f37KI10P64S8dRUs+z46PtccQcaxU25B8dP9zTmk113oleLbTH4e7+Jqms4sjaQL/NEdMaAAAA=="
-  },
-  "/images/camera.jpg": {
-    "width": 1600,
-    "height": 900,
-    "blurDataURL": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAADwAwCdASoUAAsAPu1iqU2ppaQiMAgBMB2JZgCdABhoMiuCt/37ScZIAP7xo2xAJQpwDTusFZPSirYBYPC39Br5APO81a+gFeH37Pzh+aVHjQr4ZEuXJziux63F2gvK9bJsPfoMaw6O65hGMlWbfgpyZWOj7YwA"
   }
 }
