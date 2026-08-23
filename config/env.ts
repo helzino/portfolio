@@ -38,6 +38,14 @@ export const env: Record<string, string | undefined> = {
   NEXT_PUBLIC_ABOUT_BODY: process.env.NEXT_PUBLIC_ABOUT_BODY,
   NEXT_PUBLIC_ABOUT_QUOTE: process.env.NEXT_PUBLIC_ABOUT_QUOTE,
   NEXT_PUBLIC_ABOUT_PORTRAIT: process.env.NEXT_PUBLIC_ABOUT_PORTRAIT,
+  NEXT_PUBLIC_ABOUT_QUOTE_IMAGE: process.env.NEXT_PUBLIC_ABOUT_QUOTE_IMAGE,
+
+  // ── Showreel ──────────────────────────────────────────────────────────────
+  NEXT_PUBLIC_SHOWREEL_URL: process.env.NEXT_PUBLIC_SHOWREEL_URL,
+  NEXT_PUBLIC_SHOWREEL_TITLE: process.env.NEXT_PUBLIC_SHOWREEL_TITLE,
+  NEXT_PUBLIC_SHOWREEL_EYEBROW: process.env.NEXT_PUBLIC_SHOWREEL_EYEBROW,
+  NEXT_PUBLIC_SHOWREEL_CAPTION: process.env.NEXT_PUBLIC_SHOWREEL_CAPTION,
+  NEXT_PUBLIC_SHOWREEL_POSTER: process.env.NEXT_PUBLIC_SHOWREEL_POSTER,
 
   // ── Film & TV ─────────────────────────────────────────────────────────────
   NEXT_PUBLIC_FILM_1: process.env.NEXT_PUBLIC_FILM_1,

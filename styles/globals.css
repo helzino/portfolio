@@ -268,10 +268,16 @@ video {
 .mask-line {
   display: block;
   overflow: hidden;
+  /* Instrument Serif descends below the baseline on J and Q, and .display sets
+     line-height below 1, so those glyphs fall outside the line box where the
+     clip would cut them. The inner span carries padding to bring them back
+     inside; this cancels it so the vertical rhythm is unchanged. */
+  margin-bottom: -0.2em;
 }
 
 .mask-line > span {
   display: block;
+  padding-bottom: 0.2em;
   transform: translate3d(0, 105%, 0);
   transition: transform 1.15s var(--ease-out-expo);
   will-change: transform;
@@ -355,14 +361,27 @@ video {
   will-change: transform;
 }
 
+/* The disc trails the dot and reads as its shadow, so it paints behind it. */
+.cursor-disc {
+  z-index: 1;
+}
+
+.cursor-dot {
+  z-index: 2;
+}
+
 .cursor-dot {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  /* Fixed near-white plus difference blending: the dot inverts whatever is
-     under it, so it survives both themes and any photograph. */
-  background: #f7f4ee;
-  mix-blend-mode: difference;
+  /* This used to be a fixed near-white with mix-blend-mode: difference, but
+     .cursor-root is a stacking context (fixed + z-index), so the dot blended
+     against that context's transparent backdrop rather than the page and came
+     out flat near-white — invisible on the light theme's ground. It now takes
+     the theme's ink colour, with a ring in the ground colour so it still reads
+     against a photograph. */
+  background: var(--color-paper);
+  box-shadow: 0 0 0 1.5px rgb(var(--ground-rgb) / 0.5);
 }
 
 .cursor-disc {
@@ -405,6 +424,82 @@ video {
 
 .cursor-disc[data-state="labelled"] .cursor-label {
   opacity: 1;
+}
+
+/* ── Showreel ─────────────────────────────────────────────────────────────── */
+
+.showreel {
+  padding-block: clamp(3rem, 9vh, 6rem) clamp(2rem, 6vh, 4rem);
+}
+
+.showreel-title {
+  margin: clamp(1rem, 3vw, 2rem) 0 clamp(1.5rem, 4vw, 3rem);
+}
+
+/* Full-bleed, so the reel is the widest thing on the page. */
+.showreel-media {
+  width: 100%;
+}
+
+.video-embed {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  background: var(--color-ground-soft);
+  border: 0;
+  padding: 0;
+}
+
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-embed-poster {
+  cursor: pointer;
+  color: inherit;
+}
+
+.video-embed-scrim {
+  position: absolute;
+  inset: 0;
+  background: rgb(var(--ground-rgb) / 0.28);
+  transition: background-color 0.5s var(--ease-out-expo);
+}
+
+.video-embed-poster:hover .video-embed-scrim {
+  background: rgb(var(--ground-rgb) / 0.12);
+}
+
+.video-embed-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  display: grid;
+  place-items: center;
+  width: clamp(4rem, 8vw, 6rem);
+  height: clamp(4rem, 8vw, 6rem);
+  border-radius: 50%;
+  background: var(--color-paper);
+  color: var(--color-ground);
+  padding-left: 0.2em;
+  transition: scale 0.6s var(--ease-out-expo);
+}
+
+.video-embed-poster:hover .video-embed-play,
+.video-embed-poster:focus-visible .video-embed-play {
+  scale: 1.08;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .video-embed-poster:hover .video-embed-play {
+    scale: 1;
+  }
 }
 
 /* ── Navigation ───────────────────────────────────────────────────────────── */

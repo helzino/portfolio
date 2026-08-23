@@ -1,4 +1,5 @@
 import { Hero } from "@/sections/Hero";
+import { Showreel } from "@/sections/Showreel";
 import { Disciplines } from "@/sections/Disciplines";
 import { SelectedPhotography } from "@/sections/SelectedPhotography";
 import { FilmPreview } from "@/sections/FilmPreview";
@@ -12,6 +13,7 @@ export default async function HomePage() {
   return (
     <>
       <Hero />
+      <Showreel />
       <Disciplines />
       <SelectedPhotography />
       <FilmPreview />

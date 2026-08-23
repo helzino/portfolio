@@ -99,6 +99,11 @@ Only the ones you fill in appear. Setting any of them replaces the default set.
 | `NEXT_PUBLIC_ABOUT_QUOTE` | The large pull quote |
 | `NEXT_PUBLIC_ABOUT_PORTRAIT` | The wide photograph under the title |
 | `NEXT_PUBLIC_ABOUT_QUOTE_IMAGE` | The tall photograph beside the quote |
+| `NEXT_PUBLIC_SHOWREEL_URL` | YouTube or Vimeo link; empty hides the section |
+| `NEXT_PUBLIC_SHOWREEL_TITLE` | Heading over the player |
+| `NEXT_PUBLIC_SHOWREEL_EYEBROW` | Small label above it, e.g. "Reel" |
+| `NEXT_PUBLIC_SHOWREEL_CAPTION` | One line beside the label |
+| `NEXT_PUBLIC_SHOWREEL_POSTER` | Still shown before the video is played |
 
 ### Film & TV: `NEXT_PUBLIC_FILM_1` … `NEXT_PUBLIC_FILM_8`
 

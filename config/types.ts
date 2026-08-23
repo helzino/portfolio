@@ -41,6 +41,15 @@ export interface Film {
   body: string[];
 }
 
+/** The headline film on the home page. An empty url hides the section. */
+export interface Showreel {
+  url: string;
+  title: string;
+  eyebrow: string;
+  caption: string;
+  poster: string;
+}
+
 export interface Photo {
   id: string;
   title: string;
@@ -74,4 +83,5 @@ export interface SiteContent {
   awards: Award[];
   films: Film[];
   photos: Photo[];
+  showreel: Showreel;
 }

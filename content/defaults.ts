@@ -3,7 +3,14 @@
  * variable (see CONTENT.md / .env.example) — nothing in the components reads
  * this file directly, they read config/content.ts, which merges env over these.
  */
-import type { Award, Capability, Film, Photo, TimelineEntry } from "@/config/types";
+import type {
+  Award,
+  Capability,
+  Film,
+  Photo,
+  Showreel,
+  TimelineEntry,
+} from "@/config/types";
 
 export const defaultSite = {
   name: "Helena Wreford",
@@ -190,6 +197,19 @@ export const defaultFilms: Film[] = [
     ],
   },
 ];
+
+/**
+ * The showreel that opens the home page. Paste the ordinary YouTube or Vimeo
+ * link — lib/video.ts turns it into a player URL. Leaving url empty hides the
+ * section entirely, so the page is never left with an empty frame.
+ */
+export const defaultShowreel: Showreel = {
+  url: "",
+  title: "Showreel",
+  eyebrow: "Reel",
+  caption: "Selected wildlife and documentary work.",
+  poster: "/images/nepal.jpg",
+};
 
 export const defaultPhotos: Photo[] = [
   {

@@ -19,6 +19,7 @@ import {
   defaultCapabilities,
   defaultFilms,
   defaultPhotos,
+  defaultShowreel,
   defaultSite,
   defaultSocials,
   defaultTimeline,
@@ -175,6 +176,13 @@ export const site: SiteContent = {
   awards: envAwards.length > 0 ? envAwards : defaultAwards,
   films: envFilms.length > 0 ? envFilms : defaultFilms,
   photos: envPhotos.length > 0 ? envPhotos : defaultPhotos,
+  showreel: {
+    url: read("NEXT_PUBLIC_SHOWREEL_URL") ?? defaultShowreel.url,
+    title: read("NEXT_PUBLIC_SHOWREEL_TITLE") ?? defaultShowreel.title,
+    eyebrow: read("NEXT_PUBLIC_SHOWREEL_EYEBROW") ?? defaultShowreel.eyebrow,
+    caption: read("NEXT_PUBLIC_SHOWREEL_CAPTION") ?? defaultShowreel.caption,
+    poster: read("NEXT_PUBLIC_SHOWREEL_POSTER") ?? defaultShowreel.poster,
+  },
 };
 
 export function filmBySlug(slug: string): Film | undefined {

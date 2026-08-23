@@ -46,7 +46,7 @@ export function Hero() {
           <nav className="hero-routes" aria-label="Disciplines">
             <Link href="/film" className="hero-route" data-cursor="enter">
               <span className="display display-sm">Film &amp; TV</span>
-              <span className="meta meta-dim">Directing · Camera · Aerial</span>
+              <span className="meta meta-dim">Researching · Camera · Aerial</span>
             </Link>
             <Link href="/photography" className="hero-route" data-cursor="enter">
               <span className="display display-sm">Photography</span>

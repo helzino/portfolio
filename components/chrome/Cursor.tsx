@@ -64,6 +64,10 @@ export function Cursor() {
         disc.dataset.state = "idle";
         label.textContent = "";
       }
+
+      // The dot sits above the disc, so hide it once the disc opens into a
+      // label: there, the disc is the cursor and a dot would land mid-word.
+      dot.style.opacity = disc.dataset.state === "labelled" ? "0" : "1";
     };
 
     const onLeave = () => {
