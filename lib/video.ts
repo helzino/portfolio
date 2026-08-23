@@ -25,11 +25,19 @@ function youtubeEmbed(id: string): string {
     controls: "0",
     rel: "0",
     iv_load_policy: "3",
+    // Captions off, and no automatic track selection from the viewer's locale.
     cc_load_policy: "0",
+    cc_lang_pref: "",
     disablekb: "1",
     fs: "0",
     playsinline: "1",
     color: "white",
+    // Lets the page send pause/play over postMessage when the reel scrolls out
+    // of view. Without it the player ignores commands.
+    enablejsapi: "1",
+    // Unofficial and often ignored — YouTube picks the rendition itself from
+    // bandwidth and player size. Kept because it costs nothing when honoured.
+    vq: "hd1080",
   });
   return `https://www.youtube-nocookie.com/embed/${id}?${params}`;
 }
@@ -44,6 +52,9 @@ function vimeoEmbed(id: string, hash?: string): string {
     badge: "0",
     autopause: "0",
     dnt: "1",
+    // Unlike YouTube, Vimeo honours both of these.
+    quality: "1080p",
+    texttrack: "false",
   });
   // Unlisted videos carry a privacy hash: vimeo.com/1234567/abc123.
   if (hash) params.set("h", hash);
