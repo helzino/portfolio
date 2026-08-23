@@ -204,13 +204,12 @@ export const defaultFilms: Film[] = [
  * section entirely, so the page is never left with an empty frame.
  */
 export const defaultShowreel: Showreel = {
-  url: "https://www.youtube.com/watch?v=fS12_jTdWW4",
+  url: "https://vimeo.com/1220108812",
   title: "",
   eyebrow: "Showreel",
   caption: "Selected wildlife and documentary work.",
-  // A 16:9 frame, so this wants a landscape still: nepal.jpg is 3882x5823 and
-  // would be cropped to a sliver. Replace with a frame from the reel itself.
-  poster: "/images/clown-fish.jpg",
+  // The reel's own title card, pulled from Vimeo at 1920x1080.
+  poster: "/images/showreel-poster.jpg",
 };
 
 export const defaultPhotos: Photo[] = [

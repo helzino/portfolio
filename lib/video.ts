@@ -14,11 +14,12 @@ export interface VideoSource {
  * Both players are asked for as little chrome as possible: no related grid, no
  * annotations, no subtitles.
  *
- * YouTube keeps its control bar, because the settings menu — and with it the
- * quality picker — lives there and cannot be shown on its own. It cannot be
- * made bare in any case: its title and share overlay appear on hover whatever
- * is asked for, and `modestbranding` no longer does anything since YouTube
- * deprecated it. Vimeo has no such constraint, so it stays chromeless.
+ * Both keep their control bar, so a viewer can pause and pick a quality. On
+ * YouTube that is forced anyway: the settings menu lives in the bar and cannot
+ * be shown on its own, and its title and share overlay appear on hover whatever
+ * is asked for (`modestbranding` no longer does anything since YouTube
+ * deprecated it). Vimeo could be chromeless, but a reel runs minutes and being
+ * unable to stop it is worse than a control bar.
  */
 function youtubeEmbed(id: string): string {
   const params = new URLSearchParams({
@@ -50,7 +51,7 @@ function youtubeEmbed(id: string): string {
 function vimeoEmbed(id: string, hash?: string): string {
   const params = new URLSearchParams({
     autoplay: "1",
-    controls: "0",
+    controls: "1",
     title: "0",
     byline: "0",
     portrait: "0",
