@@ -23,10 +23,6 @@ export function Showreel() {
           </h2>
           <p className="meta meta-dim">{site.showreel.caption}</p>
         </div>
-
-        <p className="display display-lg showreel-title">
-          <MaskText lines={[site.showreel.title]} />
-        </p>
       </div>
 
       <Reveal className="showreel-media" delay={80}>

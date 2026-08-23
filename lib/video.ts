@@ -11,25 +11,30 @@ export interface VideoSource {
 }
 
 /**
- * Both players are asked for as little chrome as possible: no control bar, no
- * related grid, no annotations, no keyboard shortcuts.
+ * Both players are asked for as little chrome as possible: no related grid, no
+ * annotations, no subtitles.
  *
- * YouTube cannot be made completely bare. `controls=0` removes the scrubber and
- * buttons, but the title and share overlay still appear on hover or pause, and
- * `modestbranding` no longer does anything — YouTube deprecated it. Vimeo is the
- * one to use if the frame has to be truly clean.
+ * YouTube keeps its control bar, because the settings menu — and with it the
+ * quality picker — lives there and cannot be shown on its own. It cannot be
+ * made bare in any case: its title and share overlay appear on hover whatever
+ * is asked for, and `modestbranding` no longer does anything since YouTube
+ * deprecated it. Vimeo has no such constraint, so it stays chromeless.
  */
 function youtubeEmbed(id: string): string {
   const params = new URLSearchParams({
     autoplay: "1",
-    controls: "0",
+    // The settings menu, and so the quality picker, is part of the control bar
+    // and has no parameter of its own — showing one means showing all of it.
+    controls: "1",
     rel: "0",
     iv_load_policy: "3",
     // Captions off, and no automatic track selection from the viewer's locale.
     cc_load_policy: "0",
     cc_lang_pref: "",
-    disablekb: "1",
-    fs: "0",
+    // Both follow the controls: a visible bar with a dead fullscreen button and
+    // no keyboard support would be a stranger thing than either extreme.
+    disablekb: "0",
+    fs: "1",
     playsinline: "1",
     color: "white",
     // Lets the page send pause/play over postMessage when the reel scrolls out

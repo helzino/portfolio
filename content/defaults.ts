@@ -205,8 +205,8 @@ export const defaultFilms: Film[] = [
  */
 export const defaultShowreel: Showreel = {
   url: "https://www.youtube.com/watch?v=fS12_jTdWW4",
-  title: "Showreel",
-  eyebrow: "Reel",
+  title: "",
+  eyebrow: "Showreel",
   caption: "Selected wildlife and documentary work.",
   // A 16:9 frame, so this wants a landscape still: nepal.jpg is 3882x5823 and
   // would be cropped to a sliver. Replace with a frame from the reel itself.
