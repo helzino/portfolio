@@ -10,13 +10,26 @@ export interface VideoSource {
   embed: string;
 }
 
-/** YouTube's no-cookie host, and Vimeo's player, both set to autoplay. */
+/**
+ * Both players are asked for as little chrome as possible: no control bar, no
+ * related grid, no annotations, no keyboard shortcuts.
+ *
+ * YouTube cannot be made completely bare. `controls=0` removes the scrubber and
+ * buttons, but the title and share overlay still appear on hover or pause, and
+ * `modestbranding` no longer does anything — YouTube deprecated it. Vimeo is the
+ * one to use if the frame has to be truly clean.
+ */
 function youtubeEmbed(id: string): string {
   const params = new URLSearchParams({
     autoplay: "1",
+    controls: "0",
     rel: "0",
-    modestbranding: "1",
+    iv_load_policy: "3",
+    cc_load_policy: "0",
+    disablekb: "1",
+    fs: "0",
     playsinline: "1",
+    color: "white",
   });
   return `https://www.youtube-nocookie.com/embed/${id}?${params}`;
 }
@@ -24,9 +37,12 @@ function youtubeEmbed(id: string): string {
 function vimeoEmbed(id: string, hash?: string): string {
   const params = new URLSearchParams({
     autoplay: "1",
+    controls: "0",
     title: "0",
     byline: "0",
     portrait: "0",
+    badge: "0",
+    autopause: "0",
     dnt: "1",
   });
   // Unlisted videos carry a privacy hash: vimeo.com/1234567/abc123.
