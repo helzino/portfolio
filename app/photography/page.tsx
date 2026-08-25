@@ -7,6 +7,7 @@ import { PageIntro } from "@/components/ui/PageIntro";
 export const metadata: Metadata = {
   title: "Photography",
   description: `Wildlife, landscape and travel photography by ${site.name}.`,
+  alternates: { canonical: "/photography" },
 };
 
 export default function PhotographyPage() {

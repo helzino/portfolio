@@ -30,6 +30,8 @@ export const metadata: Metadata = {
     template: `%s · ${site.name}`,
   },
   description: site.tagline,
+  // Without this the www and non-www hosts look like two pages to a crawler.
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     siteName: site.name,

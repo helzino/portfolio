@@ -9,6 +9,7 @@ import { PageIntro } from "@/components/ui/PageIntro";
 export const metadata: Metadata = {
   title: "About",
   description: site.about.intro,
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {

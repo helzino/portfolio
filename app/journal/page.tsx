@@ -8,6 +8,7 @@ import { formatPostDate, getJournalPosts } from "@/lib/posts";
 export const metadata: Metadata = {
   title: "Journal",
   description: "Notes from the field, the edit and the research desk.",
+  alternates: { canonical: "/journal" },
 };
 
 export default async function JournalPage() {

@@ -7,6 +7,7 @@ import { Reveal } from "@/components/media/Reveal";
 export const metadata: Metadata = {
   title: "Film & TV",
   description: `Film and television work by ${site.name}: research, camera, aerial and edit.`,
+  alternates: { canonical: "/film" },
 };
 
 export default function FilmPage() {

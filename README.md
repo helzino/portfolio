@@ -71,7 +71,7 @@ NEXT_PUBLIC_SITE_AVAILABILITY  Available for commissions and crew work
 NEXT_PUBLIC_HERO_HEADLINE      Helena / Wreford
 NEXT_PUBLIC_HERO_IMAGE         /images/puffin.jpg
 NEXT_PUBLIC_SOCIAL_INSTAGRAM   https://www.instagram.com/helswreford/
-NEXT_PUBLIC_SOCIAL_LINKEDIN    https://www.linkedin.com/in/hels-wreford-2500971b1/
+NEXT_PUBLIC_SOCIAL_LINKEDIN    https://www.linkedin.com/in/helena-wreford-2500971b1/
 ```
 
 Then the numbered ones for the work itself: `NEXT_PUBLIC_FILM_1…8`,

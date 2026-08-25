@@ -11,7 +11,7 @@ export const defaultSite = {
   tagline: "Visual storytelling through screen and print.",
   location: "London, United Kingdom",
   email: "helenawreford@live.com",
-  url: "https://helenawreford.com",
+  url: "https://www.helenawreford.com",
   availability: "Available for bookings",
   heroHeadline: ["Helena", "Wreford"],
   heroImage: "/images/puffin.jpg",
@@ -21,7 +21,7 @@ export const defaultSocials = [
   { label: "Instagram", href: "https://www.instagram.com/helswreford/?hl=en" },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/hels-wreford-2500971b1/",
+    href: "https://www.linkedin.com/in/helena-wreford-2500971b1/",
   },
 ];
 
