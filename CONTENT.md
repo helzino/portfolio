@@ -97,6 +97,7 @@ Only the ones you fill in appear. Setting any of them replaces the default set.
 | `NEXT_PUBLIC_ABOUT_INTRO` | The opening line of the about page |
 | `NEXT_PUBLIC_ABOUT_BODY` | The story. Paragraphs separated by `\|\|` |
 | `NEXT_PUBLIC_ABOUT_PORTRAIT` | The wide photograph under the title |
+| `NEXT_PUBLIC_ABOUT_PREVIEW_IMAGE` | The frame beside the home page intro |
 | `NEXT_PUBLIC_SHOWREEL_URL` | YouTube or Vimeo link; empty hides the section |
 | `NEXT_PUBLIC_SHOWREEL_TITLE` | Heading over the player |
 | `NEXT_PUBLIC_SHOWREEL_EYEBROW` | Small label above it, e.g. "Reel" |

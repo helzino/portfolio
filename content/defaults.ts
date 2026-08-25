@@ -29,13 +29,16 @@ export const defaultAbout = {
   intro:
     "My work moves between documentary film & TV and stills, carrying the same instinct for light and story into both.",
   body: [
-    "I have loved cameras since saving up for a GoPro Hero 3 as a kid. I would film anything — from a narrated tour of the vegetable patch to ducks in the park. I just loved being able to capture the world and life around me.",
+    "I have loved cameras since saving up for a GoPro Hero 3 as a kid. I would film anything. From a narrated tour of the vegetable patch to ducks in the park. I just loved being able to capture the world and life around me.",
     "Alongside that came a love for the natural world, something my Zoology degree at the University of Bristol only cemented. I have always been drawn to experiencing new things, exploring, and being outside my comfort zone. It is the combination of these elements that is the heart of who I am, and it is what drives me in my career.",
     "That drive has taken me from research and hands-on technical work into the world of networks, including roles at National Geographic and ITV's Plimsoll Productions, across linear broadcast as well as YouTube and digital spaces. I have gained experience across a variety of areas of the industry and, most importantly, had the opportunity to work alongside great people at every stage of the creative process.",
     "Photography is another part of what I do. I love documenting moments and human connection — from festivals and events to portraits. I am always keen to push my capabilities, meet new people and find new moments to capture.",
     "Above all, I care about telling stories that can have a positive impact on the world. Stories that showcase people pushing the boundaries of what is possible, bring attention to the things that matter, and connect audiences with ideas, places and people they might never otherwise encounter.",
   ],
   portrait: "/images/girls.jpg",
+  // The frame on the home page, which is a 4:5 crop and stands on its own
+  // rather than introducing her, so it need not be the portrait above.
+  previewImage: "/images/butterfly.jpg",
 };
 
 export const defaultCapabilities: Capability[] = [

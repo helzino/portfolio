@@ -139,6 +139,8 @@ export const site: SiteContent = {
     intro: read("NEXT_PUBLIC_ABOUT_INTRO") ?? defaultAbout.intro,
     body: aboutBody ? paragraphs(aboutBody) : defaultAbout.body,
     portrait: read("NEXT_PUBLIC_ABOUT_PORTRAIT") ?? defaultAbout.portrait,
+    previewImage:
+      read("NEXT_PUBLIC_ABOUT_PREVIEW_IMAGE") ?? defaultAbout.previewImage,
   },
   capabilities: envCapabilities.length > 0 ? envCapabilities : defaultCapabilities,
   films: envFilms.length > 0 ? envFilms : defaultFilms,

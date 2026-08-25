@@ -62,6 +62,7 @@ export interface SiteContent {
     intro: string;
     body: string[];
     portrait: string;
+    previewImage: string;
   };
   capabilities: Capability[];
   films: Film[];

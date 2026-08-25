@@ -23,8 +23,8 @@ export function AboutPreview() {
         <div className="about-preview-media">
           <Parallax speed={0.08}>
             <Frame
-              src={site.about.portrait}
-              alt={`${site.name} on location`}
+              src={site.about.previewImage}
+              alt=""
               ratio={4 / 5}
               sizes="(max-width: 900px) 88vw, 38vw"
             />
