@@ -12,7 +12,7 @@ const PANELS = [
     href: "/film",
     index: "01",
     title: "Film & TV",
-    line: "Research, camera (non broadcast), aerial and digital editing for documentary film and TV.",
+    line: "Research, camera (non-broadcast), aerial and digital editing for documentary film and TV.",
     keywords: ["XO Rental", "National Geographic", "Plimsoll Productions"],
     cover: "/images/national-geographic.jpg",
   },
