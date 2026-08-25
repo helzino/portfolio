@@ -51,19 +51,15 @@ export default function AboutPage() {
 
           {site.about.headshot && (
             <Reveal delay={site.about.body.length * 90}>
-              <figure className="about-signoff">
+              <div className="about-signoff">
                 <Frame
                   src={site.about.headshot}
                   alt={site.name}
                   ratio={4 / 5}
-                  sizes="(max-width: 900px) 25vw, 110px"
+                  sizes="(max-width: 900px) 90vw, 34rem"
                   zoom={false}
                 />
-                <figcaption className="meta meta-dim about-signoff-name">
-                  {site.name}
-                  <span className="about-signoff-role">{site.role}</span>
-                </figcaption>
-              </figure>
+              </div>
             </Reveal>
           )}
         </div>
