@@ -1927,22 +1927,15 @@ video {
   padding: 0;
 }
 
+/* The index is text only; the photograph belongs to the entry itself. */
 .journal-entry {
-  display: grid;
-  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
-  gap: clamp(1.5rem, 4vw, 3.5rem);
+  display: block;
   padding-block: clamp(2rem, 5vw, 3.5rem);
   border-top: var(--rule) solid var(--color-line);
-  align-items: center;
 }
 
 .journal-list li:last-child .journal-entry {
   border-bottom: var(--rule) solid var(--color-line);
-}
-
-/* Posts without an image: the body takes the full row. */
-.journal-entry-body:only-child {
-  grid-column: 1 / -1;
 }
 
 .journal-entry-body {
