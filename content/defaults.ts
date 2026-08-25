@@ -38,7 +38,7 @@ export const defaultAbout = {
   portrait: "/images/clown-fish.jpg",
   // The frame on the home page, which is a 4:5 crop and stands on its own
   // rather than introducing her, so it need not be the portrait above.
-  previewImage: "/images/butterfly.jpg",
+  previewImage: "/images/uk-countryside.jpg",
 };
 
 export const defaultCapabilities: Capability[] = [
@@ -149,12 +149,12 @@ export const defaultPhotos: Photo[] = [
   },
   {
     id: "2",
-    title: "First Light",
+    title: "Highs & Lows",
     category: "Nature",
-    location: "United Kingdom",
-    year: "",
-    src: "/images/uk-countryside.jpg",
-    caption: "Mist sitting in the valley at dawn, one window still lit.",
+    location: "Philippines",
+    year: "2023",
+    src: "/images/butterfly.jpg",
+    caption: "Two birdwings, one settled on a leaf and one still in the air.",
   },
   {
     id: "3",
@@ -185,12 +185,12 @@ export const defaultPhotos: Photo[] = [
   },
   {
     id: "6",
-    title: "Highs & Lows",
+    title: "First Light",
     category: "Nature",
-    location: "Philippines",
-    year: "2023",
-    src: "/images/butterfly.jpg",
-    caption: "Two birdwings, one settled on a leaf and one still in the air.",
+    location: "United Kingdom",
+    year: "",
+    src: "/images/uk-countryside.jpg",
+    caption: "Mist sitting in the valley at dawn, one window still lit.",
   },
   {
     id: "7",
