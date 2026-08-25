@@ -3,12 +3,12 @@ date: '2025-01-06T11:50:54.000Z'
 title: Sony Venice 2 Camera Operator
 tagline: Skills Bootcamp in Virtual Production.
 preview: >-
-  I am currently participating in a Skills Bootcamp in Virtual Production, with a specific focus on training with Sony’s high-end VENICE 2 cameras.
+  I participated in a Skills Bootcamp in Virtual Production, with a specific focus on training with Sony’s high-end VENICE 2 cameras.
 image: ""
 ---
 
 
-I am currently participating in a Skills Bootcamp in Virtual Production, with a specific focus on
+I participated in a Skills Bootcamp in Virtual Production, with a specific focus on
 training with Sony’s high-end VENICE 2 cameras. It is providing me with a broad understanding
 of virtual production (VP), learning how to seamlessly combine virtual computer-generated
 imagery with live-action footage, gaining hands-on experience in the entire VP pipeline, from

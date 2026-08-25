@@ -25,11 +25,11 @@ export default function AboutPage() {
         ]}
       />
 
-      <section className="about-portrait" aria-label="Portrait">
+      <section className="about-portrait" aria-hidden>
         <Parallax speed={0.05}>
           <Frame
             src={site.about.portrait}
-            alt={`${site.name} on location`}
+            alt=""
             ratio={16 / 9}
             sizes="100vw"
             priority
