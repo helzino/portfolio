@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { site } from "@/config/content";
 import { Frame } from "@/components/media/Frame";
 import { Reveal } from "@/components/media/Reveal";
 import { Parallax } from "@/components/media/Parallax";
@@ -15,6 +14,7 @@ const PANELS = [
     title: "Film & TV",
     line: "Research, camera, aerial and digital editing for documentary film and TV.",
     keywords: ["XO Rental", "National Geographic", "Plimsoll Productions"],
+    cover: "/images/national-geographic.jpg",
   },
   {
     href: "/photography",
@@ -22,19 +22,11 @@ const PANELS = [
     title: "Photography",
     line: "Wildlife, landscapes and the people met along the way, shot on location, on set and at events.",
     keywords: ["Nature", "Events", "People"],
+    cover: "/images/butterfly.jpg",
   },
 ] as const;
 
 export function Disciplines() {
-  // Avoid repeating the hero frame directly beneath itself.
-  const firstUnlike = (candidates: string[]) =>
-    candidates.find((src) => src && src !== site.heroImage) ?? candidates[0] ?? site.heroImage;
-
-  const covers: Record<string, string> = {
-    "/film": firstUnlike(site.films.map((film) => film.poster)),
-    "/photography": firstUnlike(site.photos.map((photo) => photo.src)),
-  };
-
   return (
     <section className="disciplines" aria-labelledby="disciplines-title">
       <div className="shell">
@@ -53,7 +45,7 @@ export function Disciplines() {
             <div className="discipline-media">
               <Parallax speed={0.06}>
                 <Frame
-                  src={covers[panel.href]}
+                  src={panel.cover}
                   alt=""
                   ratio={4 / 5}
                   sizes="(max-width: 900px) 90vw, 34vw"
