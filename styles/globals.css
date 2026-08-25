@@ -74,6 +74,10 @@
 
 html {
   -webkit-text-size-adjust: 100%;
+  /* The viewer hides body overflow while it is open. Reserving the gutter means
+     losing the scrollbar does not shift the page under it — which is visible on
+     the home page, where the strip beneath is pinned. */
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -1112,6 +1116,19 @@ video {
   .hgallery-item {
     width: 72vw;
   }
+}
+
+/* A frame is a button now, so it needs the browser's own styling removed. */
+.hgallery-open {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  cursor: pointer;
 }
 
 .hgallery-caption {

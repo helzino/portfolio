@@ -31,9 +31,9 @@ export default function FilmPage() {
         <hr className="rule" />
         <div className="section-head">
           <h2 id="capability-title" className="meta">
-            On a shoot I can
+            Capabilities
           </h2>
-          <p className="meta meta-dim">Crew roles &amp; certifications</p>
+          <p className="meta meta-dim">What I bring to a production</p>
         </div>
 
         <ul className="capability-grid">
