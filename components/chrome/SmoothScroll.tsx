@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 import { gsap } from "gsap";
@@ -60,22 +60,53 @@ export function SmoothScroll() {
     };
   }, [reduced]);
 
-  // Every route change starts at the top and re-measures pinned sections.
-  // The reset goes through Lenis where it is running, otherwise its internal
-  // position would drift away from the real one and everything reading scroll
-  // (the header, the scroll cue, the shaders) would be told the wrong thing.
-  useEffect(() => {
+  // Scrolling has to go through Lenis wherever it is running, otherwise its
+  // internal position drifts away from the real one and everything reading
+  // scroll (the header, the scroll cue, the shaders) is told the wrong thing.
+  const scrollTo = useCallback((target: HTMLElement | 0) => {
     const lenis = lenisRef.current;
     if (lenis) {
-      lenis.scrollTo(0, { immediate: true });
-    } else {
+      lenis.scrollTo(target, { immediate: true });
+    } else if (target === 0) {
       window.scrollTo(0, 0);
+    } else {
+      target.scrollIntoView();
     }
-    setScrollState({ y: 0, velocity: 0, progress: 0 });
+  }, []);
 
-    const id = window.setTimeout(() => ScrollTrigger.refresh(), 120);
+  const targetOf = (hash: string) =>
+    hash.length > 1 ? document.getElementById(hash.slice(1)) : null;
+
+  // A route change starts at the top, unless it carries a hash: /#showreel from
+  // another page used to land at the top, because this reset ran after the
+  // router had already dealt with the hash and undid it. Pinned sections are
+  // re-measured either way, and an anchor is only scrolled to afterwards, since
+  // pinning changes where everything below it sits.
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (!targetOf(hash)) {
+      scrollTo(0);
+      setScrollState({ y: 0, velocity: 0, progress: 0 });
+    }
+
+    const id = window.setTimeout(() => {
+      ScrollTrigger.refresh();
+      const target = targetOf(window.location.hash);
+      if (target) scrollTo(target);
+    }, 120);
     return () => window.clearTimeout(id);
-  }, [pathname]);
+  }, [pathname, scrollTo]);
+
+  // Same-page anchors change the hash without changing the route, and Lenis
+  // does not follow the browser's own jump.
+  useEffect(() => {
+    const onHashChange = () => {
+      const target = targetOf(window.location.hash);
+      if (target) scrollTo(target);
+    };
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, [scrollTo]);
 
   return null;
 }
