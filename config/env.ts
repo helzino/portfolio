@@ -8,7 +8,7 @@
  * turns it into structured data.
  *
  * Slot counts (change here and in .env.example if more are ever needed):
- *   FILM 1–8 · PHOTO 1–30 · CAPABILITY 1–8 · TIMELINE 1–8 · AWARD 1–6
+ *   FILM 1–8 · PHOTO 1–30 · CAPABILITY 1–8
  */
 
 export const env: Record<string, string | undefined> = {
@@ -36,9 +36,7 @@ export const env: Record<string, string | undefined> = {
   // ── About ─────────────────────────────────────────────────────────────────
   NEXT_PUBLIC_ABOUT_INTRO: process.env.NEXT_PUBLIC_ABOUT_INTRO,
   NEXT_PUBLIC_ABOUT_BODY: process.env.NEXT_PUBLIC_ABOUT_BODY,
-  NEXT_PUBLIC_ABOUT_QUOTE: process.env.NEXT_PUBLIC_ABOUT_QUOTE,
   NEXT_PUBLIC_ABOUT_PORTRAIT: process.env.NEXT_PUBLIC_ABOUT_PORTRAIT,
-  NEXT_PUBLIC_ABOUT_QUOTE_IMAGE: process.env.NEXT_PUBLIC_ABOUT_QUOTE_IMAGE,
 
   // ── Showreel ──────────────────────────────────────────────────────────────
   NEXT_PUBLIC_SHOWREEL_URL: process.env.NEXT_PUBLIC_SHOWREEL_URL,
@@ -114,32 +112,12 @@ export const env: Record<string, string | undefined> = {
   NEXT_PUBLIC_CAPABILITY_6: process.env.NEXT_PUBLIC_CAPABILITY_6,
   NEXT_PUBLIC_CAPABILITY_7: process.env.NEXT_PUBLIC_CAPABILITY_7,
   NEXT_PUBLIC_CAPABILITY_8: process.env.NEXT_PUBLIC_CAPABILITY_8,
-
-  // ── Timeline ──────────────────────────────────────────────────────────────
-  NEXT_PUBLIC_TIMELINE_1: process.env.NEXT_PUBLIC_TIMELINE_1,
-  NEXT_PUBLIC_TIMELINE_2: process.env.NEXT_PUBLIC_TIMELINE_2,
-  NEXT_PUBLIC_TIMELINE_3: process.env.NEXT_PUBLIC_TIMELINE_3,
-  NEXT_PUBLIC_TIMELINE_4: process.env.NEXT_PUBLIC_TIMELINE_4,
-  NEXT_PUBLIC_TIMELINE_5: process.env.NEXT_PUBLIC_TIMELINE_5,
-  NEXT_PUBLIC_TIMELINE_6: process.env.NEXT_PUBLIC_TIMELINE_6,
-  NEXT_PUBLIC_TIMELINE_7: process.env.NEXT_PUBLIC_TIMELINE_7,
-  NEXT_PUBLIC_TIMELINE_8: process.env.NEXT_PUBLIC_TIMELINE_8,
-
-  // ── Awards ────────────────────────────────────────────────────────────────
-  NEXT_PUBLIC_AWARD_1: process.env.NEXT_PUBLIC_AWARD_1,
-  NEXT_PUBLIC_AWARD_2: process.env.NEXT_PUBLIC_AWARD_2,
-  NEXT_PUBLIC_AWARD_3: process.env.NEXT_PUBLIC_AWARD_3,
-  NEXT_PUBLIC_AWARD_4: process.env.NEXT_PUBLIC_AWARD_4,
-  NEXT_PUBLIC_AWARD_5: process.env.NEXT_PUBLIC_AWARD_5,
-  NEXT_PUBLIC_AWARD_6: process.env.NEXT_PUBLIC_AWARD_6,
 };
 
 export const SLOTS = {
   film: 8,
   photo: 30,
   capability: 8,
-  timeline: 8,
-  award: 6,
 } as const;
 
 /** Reads one variable, returning undefined for unset or whitespace-only values. */

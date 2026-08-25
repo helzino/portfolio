@@ -71,7 +71,7 @@ NEXT_PUBLIC_PHOTO_1="Hanging In There | Philippines | 2023 | /images/butterfly.j
 | Variable | What it is |
 | --- | --- |
 | `NEXT_PUBLIC_SITE_NAME` | Your name, used in the header monogram, titles and footer |
-| `NEXT_PUBLIC_SITE_ROLE` | e.g. "Filmmaker & Zoologist" |
+| `NEXT_PUBLIC_SITE_ROLE` | e.g. "Researcher & Camera Assistant" |
 | `NEXT_PUBLIC_SITE_TAGLINE` | One sentence, shown top-right of the opening screen |
 | `NEXT_PUBLIC_SITE_LOCATION` | e.g. "London, United Kingdom" |
 | `NEXT_PUBLIC_SITE_EMAIL` | The address behind every "Contact" link |
@@ -96,9 +96,7 @@ Only the ones you fill in appear. Setting any of them replaces the default set.
 | --- | --- |
 | `NEXT_PUBLIC_ABOUT_INTRO` | The opening line of the about page |
 | `NEXT_PUBLIC_ABOUT_BODY` | The story. Paragraphs separated by `\|\|` |
-| `NEXT_PUBLIC_ABOUT_QUOTE` | The large pull quote |
 | `NEXT_PUBLIC_ABOUT_PORTRAIT` | The wide photograph under the title |
-| `NEXT_PUBLIC_ABOUT_QUOTE_IMAGE` | The tall photograph beside the quote |
 | `NEXT_PUBLIC_SHOWREEL_URL` | YouTube or Vimeo link; empty hides the section |
 | `NEXT_PUBLIC_SHOWREEL_TITLE` | Heading over the player |
 | `NEXT_PUBLIC_SHOWREEL_EYEBROW` | Small label above it, e.g. "Reel" |
@@ -122,7 +120,7 @@ Projects appear in number order, and each one gets its own page at
 ### Photography: `NEXT_PUBLIC_PHOTO_1` … `NEXT_PUBLIC_PHOTO_30`
 
 ```
-Title | Location | Year | Image | Caption
+Title | Category | Location | Year | Image | Caption
 ```
 
 Locations become the filter buttons at the top of the photography page
@@ -132,18 +130,6 @@ automatically, with no separate list to maintain.
 
 ```
 Title | Description
-```
-
-### Path / timeline: `NEXT_PUBLIC_TIMELINE_1` … `_8`
-
-```
-Period | Title | Organisation | Detail
-```
-
-### Recognition: `NEXT_PUBLIC_AWARD_1` … `_6`
-
-```
-Title | Detail | Year
 ```
 
 ---

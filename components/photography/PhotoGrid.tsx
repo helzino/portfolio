@@ -6,7 +6,7 @@ import { Frame } from "@/components/media/Frame";
 import { Reveal } from "@/components/media/Reveal";
 import { PhotoViewer } from "@/components/photography/PhotoViewer";
 import { orientationOf } from "@/lib/media";
-import type { Photo } from "@/config/types";
+import type { Photo, PhotoCategory } from "@/config/types";
 
 /**
  * An editorial wall rather than a grid: six repeating positions across twelve
@@ -43,15 +43,16 @@ export function PhotoGrid({ photos }: { photos: Photo[] }) {
     }
   }
 
-  const locations = useMemo(() => {
-    const unique = Array.from(
-      new Set(photos.map((photo) => photo.location).filter(Boolean))
-    );
-    return ["All", ...unique];
+  // Only offer a category once something actually carries it, so the filter
+  // never shows an empty Events or People tab.
+  const categories = useMemo(() => {
+    const order: PhotoCategory[] = ["Nature", "Events", "People"];
+    const present = new Set(photos.map((photo) => photo.category));
+    return ["All", ...order.filter((category) => present.has(category))];
   }, [photos]);
 
   const visible = useMemo(
-    () => (filter === "All" ? photos : photos.filter((p) => p.location === filter)),
+    () => (filter === "All" ? photos : photos.filter((p) => p.category === filter)),
     [photos, filter]
   );
 
@@ -62,17 +63,17 @@ export function PhotoGrid({ photos }: { photos: Photo[] }) {
 
   return (
     <>
-      <div className="filters shell" role="group" aria-label="Filter by location">
-        {locations.map((location) => (
+      <div className="filters shell" role="group" aria-label="Filter by subject">
+        {categories.map((category) => (
           <button
-            key={location}
+            key={category}
             type="button"
             className="meta filter"
-            data-active={filter === location}
-            onClick={() => setFilter(location)}
+            data-active={filter === category}
+            onClick={() => setFilter(category)}
           >
-            {location}
-            {location === "All" && (
+            {category}
+            {category === "All" && (
               <span className="numeral filter-count"> ({photos.length})</span>
             )}
           </button>

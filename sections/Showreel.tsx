@@ -1,6 +1,5 @@
 import { site } from "@/config/content";
 import { VideoEmbed } from "@/components/media/VideoEmbed";
-import { MaskText } from "@/components/media/MaskText";
 import { Reveal } from "@/components/media/Reveal";
 import { parseVideoUrl } from "@/lib/video";
 
@@ -14,7 +13,7 @@ export function Showreel() {
   if (!source) return null;
 
   return (
-    <section className="showreel" aria-labelledby="showreel-title">
+    <section id="showreel" className="showreel" aria-labelledby="showreel-title">
       <div className="shell">
         <hr className="rule" />
         <div className="section-head">

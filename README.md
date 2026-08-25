@@ -62,7 +62,7 @@ The variables worth setting first:
 
 ```
 NEXT_PUBLIC_SITE_NAME          Helena Wreford
-NEXT_PUBLIC_SITE_ROLE          Filmmaker & Zoologist
+NEXT_PUBLIC_SITE_ROLE          Researcher & Camera Assistant
 NEXT_PUBLIC_SITE_TAGLINE       Wildlife storytelling for screen and print…
 NEXT_PUBLIC_SITE_LOCATION      London, United Kingdom
 NEXT_PUBLIC_SITE_EMAIL         helenawreford@live.com
@@ -75,9 +75,8 @@ NEXT_PUBLIC_SOCIAL_LINKEDIN    https://www.linkedin.com/in/hels-wreford-2500971b
 ```
 
 Then the numbered ones for the work itself: `NEXT_PUBLIC_FILM_1…8`,
-`NEXT_PUBLIC_PHOTO_1…30`, `NEXT_PUBLIC_CAPABILITY_1…8`,
-`NEXT_PUBLIC_TIMELINE_1…8`, `NEXT_PUBLIC_AWARD_1…6`. Their formats are
-documented in [CONTENT.md](./CONTENT.md).
+`NEXT_PUBLIC_PHOTO_1…30` and `NEXT_PUBLIC_CAPABILITY_1…8`. Their formats
+are documented in [CONTENT.md](./CONTENT.md).
 
 ### After changing a variable
 

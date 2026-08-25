@@ -15,26 +15,22 @@
  */
 import {
   defaultAbout,
-  defaultAwards,
   defaultCapabilities,
   defaultFilms,
   defaultPhotos,
   defaultShowreel,
   defaultSite,
   defaultSocials,
-  defaultTimeline,
 } from "@/content/defaults";
-import { SLOTS, fields, list, paragraphs, read, slot } from "@/config/env";
-import { slugify } from "@/lib/slugify";
+import { SLOTS, fields, paragraphs, read, slot } from "@/config/env";
 import type {
-  Award,
   Capability,
   Film,
   Photo,
+  PhotoCategory,
   SiteContent,
   Social,
   ThemePreference,
-  TimelineEntry,
 } from "@/config/types";
 
 /** Collects every defined slot in a numbered series and maps it to a record. */
@@ -56,40 +52,38 @@ function collect<T>(
 const at = (parts: string[], index: number): string => parts[index]?.trim() ?? "";
 
 // ── Films ───────────────────────────────────────────────────────────────────
-// NEXT_PUBLIC_FILM_n = Title | Role | Year | Format | Poster | Link | Description
-const envFilms = collect<Film>("FILM", SLOTS.film, (value, index) => {
+// NEXT_PUBLIC_FILM_n = Title | Role | Year | Format | Poster | Description
+const envFilms = collect<Film>("FILM", SLOTS.film, (value) => {
   const parts = fields(value);
   const title = at(parts, 0);
   if (!title) return null;
-  const stills = slot("FILM", index, "STILLS");
-  const body = slot("FILM", index, "BODY");
   return {
-    slug: slugify(title),
     title,
     role: at(parts, 1),
     year: at(parts, 2),
     format: at(parts, 3),
     poster: at(parts, 4),
-    link: at(parts, 5) || undefined,
-    description: at(parts, 6),
-    stills: stills ? list(stills) : [],
-    body: body ? paragraphs(body) : [],
+    description: at(parts, 5),
   };
 });
 
 // ── Photographs ─────────────────────────────────────────────────────────────
-// NEXT_PUBLIC_PHOTO_n = Title | Location | Year | Image | Caption
+// NEXT_PUBLIC_PHOTO_n = Title | Category | Location | Year | Image | Caption
 const envPhotos = collect<Photo>("PHOTO", SLOTS.photo, (value, index) => {
   const parts = fields(value);
-  const src = at(parts, 3);
+  const src = at(parts, 4);
   if (!src) return null;
+  const category = at(parts, 1);
   return {
     id: String(index),
     title: at(parts, 0),
-    location: at(parts, 1),
-    year: at(parts, 2),
+    category: (["Nature", "Events", "People"].includes(category)
+      ? category
+      : "Nature") as PhotoCategory,
+    location: at(parts, 2),
+    year: at(parts, 3),
     src,
-    caption: at(parts, 4),
+    caption: at(parts, 5),
   };
 });
 
@@ -104,29 +98,6 @@ const envCapabilities = collect<Capability>(
     return title ? { title, description: at(parts, 1) } : null;
   }
 );
-
-// ── Timeline ────────────────────────────────────────────────────────────────
-// NEXT_PUBLIC_TIMELINE_n = Period | Title | Organisation | Detail
-const envTimeline = collect<TimelineEntry>("TIMELINE", SLOTS.timeline, (value) => {
-  const parts = fields(value);
-  const title = at(parts, 1);
-  return title
-    ? {
-        period: at(parts, 0),
-        title,
-        organisation: at(parts, 2),
-        detail: at(parts, 3),
-      }
-    : null;
-});
-
-// ── Awards ──────────────────────────────────────────────────────────────────
-// NEXT_PUBLIC_AWARD_n = Title | Detail | Year
-const envAwards = collect<Award>("AWARD", SLOTS.award, (value) => {
-  const parts = fields(value);
-  const title = at(parts, 0);
-  return title ? { title, detail: at(parts, 1), year: at(parts, 2) } : null;
-});
 
 // ── Socials ─────────────────────────────────────────────────────────────────
 const socialSources: Social[] = [
@@ -167,13 +138,9 @@ export const site: SiteContent = {
   about: {
     intro: read("NEXT_PUBLIC_ABOUT_INTRO") ?? defaultAbout.intro,
     body: aboutBody ? paragraphs(aboutBody) : defaultAbout.body,
-    quote: read("NEXT_PUBLIC_ABOUT_QUOTE") ?? defaultAbout.quote,
     portrait: read("NEXT_PUBLIC_ABOUT_PORTRAIT") ?? defaultAbout.portrait,
-    quoteImage: read("NEXT_PUBLIC_ABOUT_QUOTE_IMAGE") ?? defaultAbout.quoteImage,
   },
   capabilities: envCapabilities.length > 0 ? envCapabilities : defaultCapabilities,
-  timeline: envTimeline.length > 0 ? envTimeline : defaultTimeline,
-  awards: envAwards.length > 0 ? envAwards : defaultAwards,
   films: envFilms.length > 0 ? envFilms : defaultFilms,
   photos: envPhotos.length > 0 ? envPhotos : defaultPhotos,
   showreel: {
@@ -185,15 +152,4 @@ export const site: SiteContent = {
   },
 };
 
-export function filmBySlug(slug: string): Film | undefined {
-  return site.films.find((film) => film.slug === slug);
-}
-
 /** Ordered neighbours for previous / next project navigation. */
-export function filmNeighbours(slug: string): { previous: Film; next: Film } | null {
-  const index = site.films.findIndex((film) => film.slug === slug);
-  if (index < 0 || site.films.length < 2) return null;
-  const previous = site.films[(index - 1 + site.films.length) % site.films.length];
-  const next = site.films[(index + 1) % site.films.length];
-  return { previous, next };
-}

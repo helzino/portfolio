@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { getMedia } from "@/lib/media";
@@ -57,15 +56,13 @@ export function FilmList({ films }: { films: Film[] }) {
     <div className="film-list" onPointerLeave={() => setActive(null)}>
       <ol className="film-rows">
         {films.map((film, index) => (
-          <li key={film.slug}>
-            <Link
-              href={`/film/${film.slug}`}
+          <li key={film.title}>
+            {/* Not a link: these entries have no page of their own. */}
+            <div
               className="film-row"
               data-active={active === index}
               data-dimmed={active !== null && active !== index}
-              data-cursor="view"
               onPointerEnter={() => setActive(index)}
-              onFocus={() => setActive(index)}
             >
               <span className="meta meta-dim numeral film-row-index">
                 {String(index + 1).padStart(2, "0")}
@@ -92,7 +89,7 @@ export function FilmList({ films }: { films: Film[] }) {
                   />
                 </span>
               )}
-            </Link>
+            </div>
           </li>
         ))}
       </ol>
@@ -100,7 +97,7 @@ export function FilmList({ films }: { films: Film[] }) {
       {showFloating && (
         <div ref={preview} className="film-preview" data-visible={active !== null} aria-hidden>
           {films.map((film, index) => (
-            <div key={film.slug} className="film-preview-frame" data-shown={active === index}>
+            <div key={film.title} className="film-preview-frame" data-shown={active === index}>
               {film.poster && (
                 <Image
                   src={film.poster}

@@ -11,9 +11,20 @@ const IMAGE_DIR = path.join(process.cwd(), "public", "images");
 const OUT = path.join(process.cwd(), "content", "media.json");
 const EXT = new Set([".jpg", ".jpeg", ".png", ".webp", ".avif"]);
 
-const files = (await readdir(IMAGE_DIR)).filter((f) =>
-  EXT.has(path.extname(f).toLowerCase())
-);
+/** Walks /public/images and its subfolders, returning paths relative to it. */
+async function collect(dir = IMAGE_DIR) {
+  const entries = await readdir(dir, { withFileTypes: true });
+  const found = [];
+  for (const entry of entries) {
+    const abs = path.join(dir, entry.name);
+    if (entry.isDirectory()) found.push(...(await collect(abs)));
+    else if (EXT.has(path.extname(entry.name).toLowerCase()))
+      found.push(path.relative(IMAGE_DIR, abs));
+  }
+  return found;
+}
+
+const files = await collect();
 
 const media = {};
 for (const file of files.sort()) {
@@ -25,7 +36,7 @@ for (const file of files.sort()) {
     .resize(20, null, { fit: "inside" })
     .webp({ quality: 40 })
     .toBuffer();
-  media[`/images/${file}`] = {
+  media[`/images/${file.split(path.sep).join("/")}`] = {
     width,
     height,
     blurDataURL: `data:image/webp;base64,${blur.toString("base64")}`,

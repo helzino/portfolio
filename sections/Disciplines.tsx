@@ -13,24 +13,19 @@ const PANELS = [
     href: "/film",
     index: "01",
     title: "Film & TV",
-    line: "Research, camera, aerial and edit for wildlife documentary and branded film.",
-    keywords: ["Documentary", "Aerial (A2 CofC)", "Virtual production", "Research"],
+    line: "Research, camera, aerial and digital editing for documentary film and TV.",
+    keywords: ["XO Rental", "National Geographic", "Plimsoll Productions"],
   },
   {
     href: "/photography",
     index: "02",
     title: "Photography",
-    line: "Wildlife, landscape and the people met along the way, shot on location, printed and exhibited.",
-    keywords: ["Wildlife", "Travel", "Underwater", "Editorial"],
+    line: "Wildlife, landscapes and the people met along the way, shot on location, on set and at events.",
+    keywords: ["Nature", "Events", "People"],
   },
 ] as const;
 
 export function Disciplines() {
-  const counts: Record<string, string> = {
-    "/film": `${site.films.length} projects`,
-    "/photography": `${site.photos.length} photographs`,
-  };
-
   // Avoid repeating the hero frame directly beneath itself.
   const firstUnlike = (candidates: string[]) =>
     candidates.find((src) => src && src !== site.heroImage) ?? candidates[0] ?? site.heroImage;
@@ -79,7 +74,7 @@ export function Disciplines() {
                   ))}
                 </ul>
                 <span className="discipline-cta meta">
-                  {counts[panel.href]}
+                  More details
                   <span className="discipline-arrow" aria-hidden>
                     →
                   </span>

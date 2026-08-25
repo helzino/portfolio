@@ -3,24 +3,16 @@
  * variable (see CONTENT.md / .env.example) — nothing in the components reads
  * this file directly, they read config/content.ts, which merges env over these.
  */
-import type {
-  Award,
-  Capability,
-  Film,
-  Photo,
-  Showreel,
-  TimelineEntry,
-} from "@/config/types";
+import type { Capability, Film, Photo, Showreel } from "@/config/types";
 
 export const defaultSite = {
   name: "Helena Wreford",
-  role: "Filmmaker & Zoologist",
-  tagline:
-    "Wildlife storytelling for screen and print, by a zoologist behind the camera.",
+  role: "Researcher & Camera Assistant",
+  tagline: "Visual storytelling through screen and print.",
   location: "London, United Kingdom",
   email: "helenawreford@live.com",
   url: "https://helenawreford.com",
-  availability: "Available for commissions and crew work",
+  availability: "Available for bookings",
   heroHeadline: ["Helena", "Wreford"],
   heroImage: "/images/puffin.jpg",
 };
@@ -35,166 +27,91 @@ export const defaultSocials = [
 
 export const defaultAbout = {
   intro:
-    "I am a zoologist who tells stories with a camera. My work moves between wildlife film and stills, pointing the same instinct for patience, light and behaviour at two different screens.",
+    "My work moves between documentary film & TV and stills, carrying the same instinct for light and story into both.",
   body: [
-    "I graduated from the University of Bristol with a BSc in Zoology, writing my dissertation on the impact of artificial light at night on marine species, and serving as Vice-President of the Wildlife Film Society.",
-    "Since then I have worked as a researcher, drone pilot, camera operator and editor, from the cliffs of Skomer Island to the surf coast of Costa Rica, most recently training on Sony VENICE 2 cameras in virtual production.",
-    "I have made work for National Geographic and Plimsoll Productions, for traditional broadcast and for YouTube, building a career in factual television around natural history and adventure.",
-    "I care about making science feel close enough to touch: films and photographs that give an audience a reason to look twice, and then to look after.",
+    "I have loved cameras since saving up for a GoPro Hero 3 as a kid. I would film anything — from a narrated tour of the vegetable patch to ducks in the park. I just loved being able to capture the world and life around me.",
+    "Alongside that came a love for the natural world, something my Zoology degree at the University of Bristol only cemented. I have always been drawn to experiencing new things, exploring, and being outside my comfort zone. It is the combination of these elements that is the heart of who I am, and it is what drives me in my career.",
+    "That drive has taken me from research and hands-on technical work into the world of networks, including roles at National Geographic and ITV's Plimsoll Productions, across linear broadcast as well as YouTube and digital spaces. I have gained experience across a variety of areas of the industry and, most importantly, had the opportunity to work alongside great people at every stage of the creative process.",
+    "Photography is another part of what I do. I love documenting moments and human connection — from festivals and events to portraits. I am always keen to push my capabilities, meet new people and find new moments to capture.",
+    "Above all, I care about telling stories that can have a positive impact on the world. Stories that showcase people pushing the boundaries of what is possible, bring attention to the things that matter, and connect audiences with ideas, places and people they might never otherwise encounter.",
   ],
-  quote:
-    "The goal is never the animal in frame. It is the moment somebody decides they care about it.",
   portrait: "/images/girls.jpg",
-  // Sits beside the quote at 4:5 and renders large, so it wants a sharp,
-  // portrait-orientation frame — not the same one as the portrait above.
-  quoteImage: "/images/monkey.jpg",
 };
 
 export const defaultCapabilities: Capability[] = [
   {
-    title: "Direction & Camera",
+    title: "Research & Story",
     description:
-      "Shooting on Sony A7 IV and VENICE 2, from observational wildlife sequences to interview-led documentary. Kit room experience rigging and operating RED, FX6 and Sony A7S bodies, and DJI Ronin gimbals on shoots.",
+      "Story development, contributor outreach and fact-checking, all supported by a scientific background in Zoology from the University of Bristol.",
+  },
+  {
+    title: "Camera & Shooting",
+    description:
+      "Camera assisting and shooting experience across Sony systems, from the A7 IV to VENICE 2 training, on documentary and interview-led formats.",
   },
   {
     title: "Aerial (A2 CofC)",
     description:
-      "Certified drone pilot, flying coastline, canopy and city for wildlife documentary and commercial work.",
+      "Certified drone pilot, flying coastline, canopy and city for documentary shorts and commercial work.",
+  },
+  {
+    title: "Technical Knowledge",
+    description:
+      "Technical experience preparing production kit across major camera systems (RED, ARRI, Sony, Canon), lens sets, lighting and sound for a wide range of productions.",
   },
   {
     title: "Underwater",
     description:
-      "Qualified scuba diver shooting marine subjects, with a research background in marine ecology.",
-  },
-  {
-    title: "Research & Story",
-    description:
-      "Development research, contributor outreach and scripting: finding the narrative before the camera turns over.",
+      "Qualified PADI Advanced Open Water diver, trained in underwater photography.",
   },
   {
     title: "Edit & Post",
     description:
-      "Cutting short-form documentary and social campaigns, including grade and sound finishing.",
+      "Confident using Adobe platforms to cut short-form documentary, BTS and digital content.",
   },
   {
-    title: "Science Communication",
+    title: "Photography",
     description:
-      "Translating peer-reviewed research into work that a general audience will actually watch and read.",
-  },
-];
-
-export const defaultTimeline: TimelineEntry[] = [
-  {
-    period: "2024 to present",
-    title: "Researcher",
-    organisation: "WildReach Productions",
-    detail:
-      "Pitching stories about the relationships between people and wildlife, and working with contributors to find the narrative behind them.",
-  },
-  {
-    period: "2025",
-    title: "Camera Operator, Virtual Production",
-    organisation: "Skills Bootcamp, Sony VENICE 2",
-    detail:
-      "Training across the virtual production pipeline: Unreal Engine, camera tracking, plate playback and real-time content.",
-  },
-  {
-    period: "2021 to 2024",
-    title: "BSc Zoology",
-    organisation: "University of Bristol",
-    detail:
-      "Animal communication and marine ecology. Dissertation on artificial light at night. Vice-President, Wildlife Film Society.",
-  },
-  {
-    period: "2021 to 2022",
-    title: "Drone Pilot, Researcher, Editor",
-    organisation: "Bristol: A Hidden Eden",
-    detail:
-      "Aerial photography and research for a Wildlife Film Society production about the city's overlooked wildlife.",
-  },
-  {
-    period: "2021",
-    title: "Content Creator",
-    organisation: "Dreamsea Surf Camp, Costa Rica",
-    detail:
-      "Two months on site filming, photographing and running social storytelling for an audience of 50,000+.",
-  },
-];
-
-export const defaultAwards: Award[] = [
-  {
-    title: "Communicating Science Through Filmmaking",
-    detail: "Winner, judged by BBC Planet Earth III producers",
-    year: "2023",
-  },
-  {
-    title: "Future Leap Wildlife Photographer Exhibition",
-    detail: "Shortlisted and exhibited",
-    year: "2023",
+      "Wildlife, landscape, event and portrait work, shot on location, on set and at events.",
   },
 ];
 
 export const defaultFilms: Film[] = [
   {
-    slug: "bristol-a-hidden-eden",
-    title: "Bristol: A Hidden Eden",
-    role: "Drone Pilot · Researcher · Editor",
-    year: "2022",
-    format: "Documentary short",
+    title: "XO Rental",
+    role: "Kit Technician",
+    year: "2026",
+    format: "Role",
     description:
-      "A city read as an ecosystem: peregrines on tower blocks, foxes on terraces, and the green corridors nobody notices.",
-    poster: "/images/puffin.jpg",
-    stills: ["/images/volcano.jpg", "/images/fish.jpg"],
-    body: [
-      "Produced with the University of Bristol Wildlife Film Society, Bristol: A Hidden Eden looks for wilderness inside a city that assumes it has none.",
-      "I flew the aerial sequences, ran the research and cut the film, mapping the routes urban animals take through Bristol, then finding the light that made those routes visible on screen.",
-    ],
+      "Preparing and checking camera, lens, lighting and sound packages across major systems for productions going out on location.",
+    poster: "",
   },
   {
-    slug: "sony-venice-2-virtual-production",
+    title: "National Geographic",
+    role: "Production Intern",
+    year: "2025",
+    format: "Role",
+    description:
+      "Working across linear broadcast and digital output, from the Amsterdam summit floor to the edit.",
+    poster: "/images/national-geographic.jpg",
+  },
+  {
+    title: "Plimsoll Productions",
+    role: "Trainee",
+    year: "2025",
+    format: "Role",
+    description:
+      "Natural history and factual production with ITV's Plimsoll, across research, kit and the day-to-day of the floor.",
+    poster: "",
+  },
+  {
     title: "Virtual Production: Sony VENICE 2",
     role: "Camera Operator",
-    year: "2025",
+    year: "2024",
     format: "Skills Bootcamp",
     description:
       "Training on Sony's VENICE 2 across the full virtual production pipeline, from Unreal Engine plates to real-time capture.",
     poster: "",
-    stills: [],
-    link: "https://pro.sony/en_AU/products/digital-cinema-cameras/venice2/",
-    body: [
-      "A bootcamp in virtual production: combining computer-generated environments with live action, and learning the pipeline that connects them, from Unreal Engine and camera tracking to plate playback and real-time content.",
-      "Operating VENICE 2 gave me a working knowledge of high-end cinema camera bodies and the discipline that comes with them, which I now bring to documentary sets.",
-    ],
-  },
-  {
-    slug: "wildreach-development",
-    title: "Human / Wildlife",
-    role: "Researcher",
-    year: "2024 to present",
-    format: "Development, WildReach Productions",
-    description:
-      "Ongoing development research into the relationships people build with the animals they live alongside.",
-    poster: "/images/yak.jpg",
-    stills: ["/images/girls.jpg"],
-    body: [
-      "Development work for WildReach Productions: pitching story ideas built around the relationships between people and wildlife, and speaking to contributors to find the ones worth filming.",
-      "The research runs ahead of the camera. The strongest sequences usually exist as a conversation months before they exist as a shot.",
-    ],
-  },
-  {
-    slug: "dreamsea-costa-rica",
-    title: "Dreamsea, Costa Rica",
-    role: "Content Creator",
-    year: "2021",
-    format: "Branded social campaign",
-    description:
-      "Two months on the Pacific coast filming, photographing and writing for a surf camp's 50,000-strong audience.",
-    poster: "/images/fish.jpg",
-    stills: ["/images/butterfly.jpg"],
-    body: [
-      "Living on site for two months, I shot and cut daily content (surf, jungle, the people passing through) and managed the channels it went out on.",
-      "It taught me to work quickly and alone: one camera, one drone, and a story that had to be finished before the light went.",
-    ],
   },
 ];
 
@@ -206,64 +123,121 @@ export const defaultFilms: Film[] = [
 export const defaultShowreel: Showreel = {
   url: "https://vimeo.com/1220108812",
   title: "",
-  eyebrow: "Showreel",
-  caption: "Selected wildlife and documentary work.",
+  eyebrow: "Cinematography showreel",
+  caption: "A glance into life down my lens.",
   // The reel's own title card, pulled from Vimeo at 1920x1080.
   poster: "/images/showreel-poster.jpg",
 };
 
+/**
+ * Photography, grouped by what is in the frame. Events and People are filled
+ * from public/images/events and public/images/people; the filter only offers a
+ * category once at least one photograph carries it.
+ */
 export const defaultPhotos: Photo[] = [
   {
     id: "1",
-    title: "Highs & Lows",
-    location: "Philippines",
-    year: "2023",
-    src: "/images/butterfly.jpg",
-    caption: "Two birdwings, one settled on a leaf and one still in the air.",
-  },
-  {
-    id: "2",
     title: "Spotted Something",
+    category: "Nature",
     location: "Skomer Island, Wales",
     year: "2023",
     src: "/images/puffin.jpg",
     caption: "A puffin on the cliff edge, seconds before the burrow run.",
   },
   {
+    id: "2",
+    title: "First Light",
+    category: "Nature",
+    location: "United Kingdom",
+    year: "",
+    src: "/images/uk-countryside.jpg",
+    caption: "Mist sitting in the valley at dawn, one window still lit.",
+  },
+  {
     id: "3",
-    title: "Morning Commute",
-    location: "Nepal",
-    year: "2022",
-    src: "/images/yak.jpg",
-    caption: "A working yak on the trail above the treeline.",
+    title: "Full Tilt",
+    category: "Events",
+    location: "Boomtown, Hampshire",
+    year: "",
+    src: "/images/events/boomtown-crowd.jpg",
+    caption: "The view from behind the decks, main stage, mid-afternoon.",
   },
   {
     id: "4",
+    title: "Two Grooms",
+    category: "People",
+    location: "London",
+    year: "",
+    src: "/images/people/two-grooms.jpg",
+    caption: "A pause between the ceremony and the party, on concrete.",
+  },
+  {
+    id: "5",
     title: "Conflicting Contrasts",
+    category: "Nature",
     location: "Guatemala",
     year: "2022",
     src: "/images/volcano.jpg",
     caption: "A gentle eruption, watched from a ridge at first light.",
   },
   {
-    id: "5",
-    title: "What's The Gossip",
-    location: "Nepal",
-    year: "2022",
-    src: "/images/girls.jpg",
-    caption: "Two girls catching up on the news of the town.",
+    id: "6",
+    title: "Highs & Lows",
+    category: "Nature",
+    location: "Philippines",
+    year: "2023",
+    src: "/images/butterfly.jpg",
+    caption: "Two birdwings, one settled on a leaf and one still in the air.",
   },
   {
-    id: "6",
+    id: "7",
     title: "Yin & Yang",
+    category: "Nature",
     location: "Croatia",
     year: "2023",
     src: "/images/fish.jpg",
     caption: "The perfect balance, found underwater.",
   },
   {
-    id: "7",
+    id: "8",
+    title: "Nemo & Co",
+    category: "Nature",
+    location: "Philippines",
+    year: "",
+    src: "/images/clown-fish.jpg",
+    caption: "A family of clown fish protecting their eggs.",
+  },
+  {
+    id: "9",
+    title: "Lost in Thought",
+    category: "Nature",
+    location: "Nepal",
+    year: "",
+    src: "/images/monkey.jpg",
+    caption: "A monkey perched on the steps in Kathmandu.",
+  },
+  {
+    id: "10",
+    title: "Morning Commute",
+    category: "Nature",
+    location: "Nepal",
+    year: "2022",
+    src: "/images/yak.jpg",
+    caption: "A working yak on the trail above the treeline.",
+  },
+  {
+    id: "11",
+    title: "Mountain Companions",
+    category: "Nature",
+    location: "Nepal",
+    year: "",
+    src: "/images/nepal.jpg",
+    caption: "Yaks and their owner beneath snow-covered Himalayan giants.",
+  },
+  {
+    id: "12",
     title: "Tiny Forest Takeover",
+    category: "Nature",
     location: "Australia",
     year: "",
     src: "/images/mushrooms.jpg",
@@ -271,43 +245,93 @@ export const defaultPhotos: Photo[] = [
       "Bright red mushrooms clustering along the twisted roots of an old tree.",
   },
   {
-    id: "8",
-    title: "Mountain Companions",
-    location: "Nepal",
-    year: "",
-    src: "/images/nepal.jpg",
-    caption: "Yaks and their owner beneath snow-covered Himalayan giants.",
-  },
-  {
-    id: "9",
+    id: "13",
     title: "Still Waters",
+    category: "Nature",
     location: "Slovenia",
     year: "",
     src: "/images/island.jpg",
     caption: "Lake Bled's island church, surrounded by alpine scenery.",
   },
   {
-    id: "10",
-    title: "Nemo & Co",
-    location: "Philippines",
-    year: "",
-    src: "/images/clown-fish.jpg",
-    caption: "A family of clown fish protecting their eggs.",
-  },
-  {
-    id: "11",
-    title: "Lost in Thought",
-    location: "Nepal",
-    year: "",
-    src: "/images/monkey.jpg",
-    caption: "A monkey perched on the steps in Kathmandu.",
-  },
-  {
-    id: "12",
+    id: "14",
     title: "Built for the Cloud Line",
+    category: "Nature",
     location: "Peru",
     year: "",
     src: "/images/south-america.jpg",
     caption: "Terraces stepping down from Machu Picchu, Huayna Picchu behind.",
+  },
+  {
+    id: "15",
+    title: "Last Light",
+    category: "Events",
+    location: "Boomtown, Hampshire",
+    year: "",
+    src: "/images/events/last-light.jpg",
+    caption: "Hands up as the sun goes down over the valley.",
+  },
+  {
+    id: "16",
+    title: "Wall of Colour",
+    category: "Events",
+    location: "",
+    year: "",
+    src: "/images/events/main-stage.jpg",
+    caption: "Cued up in front of a stage-height LED wall.",
+  },
+  {
+    id: "17",
+    title: "Forest Decks",
+    category: "Events",
+    location: "",
+    year: "",
+    src: "/images/events/forest-decks.jpg",
+    caption: "A timber stage under the trees, one record into the next.",
+  },
+  {
+    id: "18",
+    title: "After Dark",
+    category: "Events",
+    location: "",
+    year: "",
+    src: "/images/events/after-dark.jpg",
+    caption: "A lit sculpture in the woods, lasers cutting through the canopy.",
+  },
+  {
+    id: "19",
+    title: "What's The Gossip",
+    category: "People",
+    location: "Nepal",
+    year: "2022",
+    src: "/images/girls.jpg",
+    caption: "Two girls catching up on the news of the town.",
+  },
+  {
+    id: "20",
+    title: "Bracken",
+    category: "People",
+    location: "",
+    year: "",
+    src: "/images/people/bracken.jpg",
+    caption: "Waterproofs on, waist-deep in ferns, waiting out the weather.",
+  },
+  {
+    id: "21",
+    title: "In the Crowd",
+    category: "People",
+    location: "",
+    year: "",
+    src: "/images/people/in-the-crowd.jpg",
+    caption: "Caught grinning on the way through the woods.",
+  },
+  {
+    id: "22",
+    title: "A Moment Out",
+    category: "People",
+    location: "",
+    year: "",
+    src: "/images/people/a-moment-out.jpg",
+    caption: "Sat back against a tree while the night carries on around her.",
   },
 ];

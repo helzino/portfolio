@@ -15,30 +15,13 @@ export interface Capability {
   description: string;
 }
 
-export interface TimelineEntry {
-  period: string;
-  title: string;
-  organisation: string;
-  detail: string;
-}
-
-export interface Award {
-  title: string;
-  detail: string;
-  year: string;
-}
-
 export interface Film {
-  slug: string;
   title: string;
   role: string;
   year: string;
   format: string;
   description: string;
   poster: string;
-  link?: string;
-  stills: string[];
-  body: string[];
 }
 
 /** The headline film on the home page. An empty url hides the section. */
@@ -50,9 +33,13 @@ export interface Showreel {
   poster: string;
 }
 
+/** Photography is filtered by what is in the frame, not where it was taken. */
+export type PhotoCategory = "Nature" | "Events" | "People";
+
 export interface Photo {
   id: string;
   title: string;
+  category: PhotoCategory;
   location: string;
   year: string;
   src: string;
@@ -74,13 +61,9 @@ export interface SiteContent {
   about: {
     intro: string;
     body: string[];
-    quote: string;
     portrait: string;
-    quoteImage: string;
   };
   capabilities: Capability[];
-  timeline: TimelineEntry[];
-  awards: Award[];
   films: Film[];
   photos: Photo[];
   showreel: Showreel;

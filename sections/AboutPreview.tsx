@@ -31,18 +31,15 @@ export function AboutPreview() {
           </Parallax>
         </div>
 
-        <blockquote className="about-preview-quote">
-          <MaskText
-            className="display display-md"
-            lines={[`\u201C${site.about.quote}\u201D`]}
-          />
+        <div className="about-preview-quote">
+          <MaskText className="display display-md" lines={[site.about.intro]} />
           <Reveal delay={180}>
-            <p className="body about-preview-intro">{site.about.intro}</p>
+            <p className="body about-preview-intro">{site.about.body[0]}</p>
             <Link href="/about" className="meta link-underline about-preview-link">
               Read the full story
             </Link>
           </Reveal>
-        </blockquote>
+        </div>
       </div>
     </section>
   );

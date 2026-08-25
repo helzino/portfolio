@@ -10,19 +10,13 @@ export const metadata: Metadata = {
 };
 
 export default function PhotographyPage() {
-  const countries = new Set(site.photos.map((photo) => photo.location).filter(Boolean));
-
   return (
     <>
       <PageIntro
         eyebrow="02 / Photography"
         title={["Photography"]}
-        lede="Wildlife, landscape and the people met along the way. Shot on location, exhibited in print."
-        meta={[
-          { label: "Frames", value: String(site.photos.length) },
-          { label: "Places", value: String(countries.size) },
-          { label: "Kit", value: "Sony A7 IV · Drone · Underwater" },
-        ]}
+        lede="Wildlife, landscapes and the people met along the way, shot on location, on set and at events."
+        meta={[{ label: "Kit", value: "Sony A7 IV · DJI Mavic 2 Zoom" }]}
       />
 
       <Suspense fallback={null}>

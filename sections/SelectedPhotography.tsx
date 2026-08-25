@@ -2,7 +2,9 @@ import { site } from "@/config/content";
 import { HorizontalGallery } from "@/components/media/HorizontalGallery";
 
 export function SelectedPhotography() {
-  const places = new Set(site.photos.map((photo) => photo.location).filter(Boolean));
+  // A taster on the home page, not the whole set: the rest is on /photography.
+  const photos = site.photos.slice(0, 5);
+  const categories = new Set(site.photos.map((photo) => photo.category));
 
   return (
     <section className="selected" aria-labelledby="selected-title">
@@ -13,12 +15,14 @@ export function SelectedPhotography() {
             Selected photography
           </h2>
           <p className="meta meta-dim">
-            {site.photos.length} frames · {places.size} places
+            {categories.size === 1
+              ? [...categories][0]
+              : [...categories].join(" · ")}
           </p>
         </div>
       </div>
 
-      <HorizontalGallery photos={site.photos} />
+      <HorizontalGallery photos={photos} />
     </section>
   );
 }

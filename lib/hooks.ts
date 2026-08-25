@@ -56,7 +56,10 @@ export function useInView<T extends HTMLElement>(options?: {
     if (!node) return;
 
     // Without IntersectionObserver everything is simply visible from the start.
+    // This runs once, as a capability check, and cannot cascade: the branch is
+    // unreachable on any browser that supports the observer.
     if (typeof IntersectionObserver === "undefined") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setVisible(true);
       return;
     }
