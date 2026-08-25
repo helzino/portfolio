@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Frame } from "@/components/media/Frame";
+import { orientationOf } from "@/lib/media";
 import { MaskText } from "@/components/media/MaskText";
 import { formatPostDate, getJournalPost, getJournalPosts } from "@/lib/posts";
 
@@ -33,6 +34,8 @@ export default async function JournalEntryPage({ params }: Params) {
   const post = await getJournalPost(slug);
   if (!post) notFound();
 
+  const portrait = orientationOf(post.image) === "portrait";
+
   return (
     <article className="note">
       <header className="shell note-head">
@@ -44,8 +47,16 @@ export default async function JournalEntryPage({ params }: Params) {
       </header>
 
       {post.image && (
-        <div className="note-media">
-          <Frame src={post.image} alt="" ratio={16 / 9} sizes="100vw" priority />
+        // A tall frame is not cropped to a letterbox and blown across the full
+        // width: it keeps its shape and sits at a size it actually has pixels for.
+        <div className="note-media" data-portrait={portrait}>
+          <Frame
+            src={post.image}
+            alt=""
+            ratio={portrait ? 4 / 5 : 16 / 9}
+            sizes={portrait ? "(max-width: 900px) 90vw, 34rem" : "100vw"}
+            priority
+          />
         </div>
       )}
 

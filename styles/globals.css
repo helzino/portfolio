@@ -1996,6 +1996,11 @@ video {
   padding-inline: var(--gutter);
 }
 
+.note-media[data-portrait="true"] {
+  max-width: 34rem;
+  margin-inline: auto;
+}
+
 .note-body {
   padding-block: clamp(3rem, 9vh, 6rem);
   max-width: 46rem;
