@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Frame } from "@/components/media/Frame";
 import { Reveal } from "@/components/media/Reveal";
@@ -21,11 +21,31 @@ const POSITIONS = [
   { column: "7 / span 6", offset: "-2vh" },
 ] as const;
 
+/** Fisher-Yates, so every order is equally likely. */
+function shuffled<T>(items: T[]): T[] {
+  const out = [...items];
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [out[i], out[j]] = [out[j], out[i]];
+  }
+  return out;
+}
+
 export function PhotoGrid({ photos }: { photos: Photo[] }) {
   const router = useRouter();
   const params = useSearchParams();
   const [filter, setFilter] = useState<string>("All");
-  const [active, setActive] = useState<number | null>(null);
+  // Which photograph is open, by id rather than position: the wall reshuffles
+  // under it, and an index would then point at a different photograph.
+  const [activeId, setActiveId] = useState<string | null>(null);
+  // Server order first, so the markup matches on hydration; the shuffle happens
+  // once mounted. Shuffling during render would put the two out of step.
+  const [order, setOrder] = useState<Photo[]>(photos);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setOrder(shuffled(photos));
+  }, [photos]);
 
   // Deep link: /photography?photo=3 opens straight into the viewer. Reacting
   // to the parameter during render keeps the viewer and the URL in step
@@ -35,10 +55,9 @@ export function PhotoGrid({ photos }: { photos: Photo[] }) {
   if (photoParam !== seenParam) {
     setSeenParam(photoParam);
     if (photoParam) {
-      const index = photos.findIndex((photo) => photo.id === photoParam);
-      if (index >= 0) {
+      if (photos.some((photo) => photo.id === photoParam)) {
         setFilter("All");
-        setActive(index);
+        setActiveId(photoParam);
       }
     }
   }
@@ -52,12 +71,29 @@ export function PhotoGrid({ photos }: { photos: Photo[] }) {
   }, [photos]);
 
   const visible = useMemo(
-    () => (filter === "All" ? photos : photos.filter((p) => p.category === filter)),
-    [photos, filter]
+    () => (filter === "All" ? order : photos.filter((p) => p.category === filter)),
+    [photos, order, filter]
+  );
+
+  // The viewer walks the wall as it is shown, so its index is a position in
+  // `visible` and is recomputed whenever that changes.
+  const activeIndex = useMemo(() => {
+    if (!activeId) return null;
+    const index = visible.findIndex((photo) => photo.id === activeId);
+    return index >= 0 ? index : null;
+  }, [visible, activeId]);
+
+  const choose = useCallback(
+    (category: string) => {
+      // Clicking All reshuffles, so the set reads differently every time.
+      if (category === "All") setOrder(shuffled(photos));
+      setFilter(category);
+    },
+    [photos]
   );
 
   const close = () => {
-    setActive(null);
+    setActiveId(null);
     router.replace("/photography", { scroll: false });
   };
 
@@ -70,7 +106,7 @@ export function PhotoGrid({ photos }: { photos: Photo[] }) {
             type="button"
             className="meta filter"
             data-active={filter === category}
-            onClick={() => setFilter(category)}
+            onClick={() => choose(category)}
           >
             {category}
             {category === "All" && (
@@ -83,7 +119,6 @@ export function PhotoGrid({ photos }: { photos: Photo[] }) {
       <div className="photo-wall shell grid-12">
         {visible.map((photo, index) => {
           const position = POSITIONS[index % POSITIONS.length];
-          const openIndex = photos.findIndex((p) => p.id === photo.id);
           return (
             <figure
               key={photo.id}
@@ -94,7 +129,7 @@ export function PhotoGrid({ photos }: { photos: Photo[] }) {
                 <button
                   type="button"
                   className="photo-button group"
-                  onClick={() => setActive(openIndex)}
+                  onClick={() => setActiveId(photo.id)}
                   data-cursor="view"
                   aria-label={`Open ${photo.title}`}
                 >
@@ -118,10 +153,10 @@ export function PhotoGrid({ photos }: { photos: Photo[] }) {
       </div>
 
       <PhotoViewer
-        photos={photos}
-        index={active}
+        photos={visible}
+        index={activeIndex}
         onClose={close}
-        onNavigate={(next) => setActive(next)}
+        onNavigate={(next) => setActiveId(visible[next]?.id ?? null)}
       />
     </>
   );
