@@ -76,6 +76,7 @@ export const defaultCapabilities: Capability[] = [
     title: "Photography",
     description:
       "Wildlife, landscape, event and portrait work, shot on location, on set and at events.",
+    aboutOnly: true,
   },
 ];
 

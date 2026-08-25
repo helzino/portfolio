@@ -13,6 +13,8 @@ export interface Social {
 export interface Capability {
   title: string;
   description: string;
+  /** Kept off the film index, which lists what she brings to a production. */
+  aboutOnly?: boolean;
 }
 
 export interface Film {

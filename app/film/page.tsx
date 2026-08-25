@@ -37,17 +37,21 @@ export default function FilmPage() {
         </div>
 
         <ul className="capability-grid">
-          {site.capabilities.map((capability, index) => (
-            <li key={capability.title}>
-              <Reveal delay={index * 60}>
-                <span className="meta meta-dim numeral">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <h3 className="display display-sm capability-title">{capability.title}</h3>
-                <p className="body capability-body">{capability.description}</p>
-              </Reveal>
-            </li>
-          ))}
+          {site.capabilities
+            .filter((capability) => !capability.aboutOnly)
+            .map((capability, index) => (
+              <li key={capability.title}>
+                <Reveal delay={index * 60}>
+                  <span className="meta meta-dim numeral">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="display display-sm capability-title">
+                    {capability.title}
+                  </h3>
+                  <p className="body capability-body">{capability.description}</p>
+                </Reveal>
+              </li>
+            ))}
         </ul>
       </section>
     </>
