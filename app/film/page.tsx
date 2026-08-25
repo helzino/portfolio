@@ -16,7 +16,7 @@ export default function FilmPage() {
       <PageIntro
         eyebrow="01 / Film & TV"
         title={["Film", "& TV"]}
-        lede="Research, camera, aerial and digital edit for documentary film and tv."
+        lede="Research, camera (non broadcast), aerial and digital edit for documentary film and tv."
         meta={[
           { label: "Projects", value: String(site.films.length) },
           { label: "Roles", value: "Researcher · Camera Assistant · Drone Pilot" },

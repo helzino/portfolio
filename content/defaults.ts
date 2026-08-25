@@ -39,6 +39,8 @@ export const defaultAbout = {
   // The frame on the home page, which is a 4:5 crop and stands on its own
   // rather than introducing her, so it need not be the portrait above.
   previewImage: "/images/uk-countryside.jpg",
+  // Signs off the story. Empty leaves the story ending on the text.
+  headshot: "/images/headshot.jpg",
 };
 
 export const defaultCapabilities: Capability[] = [

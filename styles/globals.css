@@ -1787,6 +1787,30 @@ video {
   max-width: 56ch;
 }
 
+/* Signs off the story like a byline: small portrait, name beside it. */
+.about-signoff {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 1.5rem 0 0;
+}
+
+.about-signoff .frame {
+  flex: 0 0 auto;
+  width: clamp(5rem, 12vw, 6.875rem);
+}
+
+.about-signoff-name {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  color: var(--color-ink);
+}
+
+.about-signoff-role {
+  color: var(--color-ink-dim);
+}
+
 @media (max-width: 900px) {
   .about-story-label,
   .about-story-body {

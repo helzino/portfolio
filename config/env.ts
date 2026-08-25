@@ -38,6 +38,7 @@ export const env: Record<string, string | undefined> = {
   NEXT_PUBLIC_ABOUT_BODY: process.env.NEXT_PUBLIC_ABOUT_BODY,
   NEXT_PUBLIC_ABOUT_PORTRAIT: process.env.NEXT_PUBLIC_ABOUT_PORTRAIT,
   NEXT_PUBLIC_ABOUT_PREVIEW_IMAGE: process.env.NEXT_PUBLIC_ABOUT_PREVIEW_IMAGE,
+  NEXT_PUBLIC_ABOUT_HEADSHOT: process.env.NEXT_PUBLIC_ABOUT_HEADSHOT,
 
   // ── Showreel ──────────────────────────────────────────────────────────────
   NEXT_PUBLIC_SHOWREEL_URL: process.env.NEXT_PUBLIC_SHOWREEL_URL,

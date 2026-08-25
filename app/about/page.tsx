@@ -48,6 +48,24 @@ export default function AboutPage() {
               <p className={index === 0 ? "lede" : "body"}>{paragraph}</p>
             </Reveal>
           ))}
+
+          {site.about.headshot && (
+            <Reveal delay={site.about.body.length * 90}>
+              <figure className="about-signoff">
+                <Frame
+                  src={site.about.headshot}
+                  alt={site.name}
+                  ratio={4 / 5}
+                  sizes="(max-width: 900px) 25vw, 110px"
+                  zoom={false}
+                />
+                <figcaption className="meta meta-dim about-signoff-name">
+                  {site.name}
+                  <span className="about-signoff-role">{site.role}</span>
+                </figcaption>
+              </figure>
+            </Reveal>
+          )}
         </div>
       </section>
 

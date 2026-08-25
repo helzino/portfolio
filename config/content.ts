@@ -141,6 +141,7 @@ export const site: SiteContent = {
     portrait: read("NEXT_PUBLIC_ABOUT_PORTRAIT") ?? defaultAbout.portrait,
     previewImage:
       read("NEXT_PUBLIC_ABOUT_PREVIEW_IMAGE") ?? defaultAbout.previewImage,
+    headshot: read("NEXT_PUBLIC_ABOUT_HEADSHOT") ?? defaultAbout.headshot,
   },
   capabilities: envCapabilities.length > 0 ? envCapabilities : defaultCapabilities,
   films: envFilms.length > 0 ? envFilms : defaultFilms,
