@@ -33,7 +33,9 @@ void main() {
   float amount = eased * (1.0 - eased) * 4.0;
 
   vec2 push = vec2(uDirection, 0.0) * (0.16 + wave * 0.05);
-  vec2 parallax = (uMouse - 0.5) * 0.02;
+  // Scaled by the move, so a frame at rest samples its own pixels exactly
+  // rather than sitting a fraction off and smearing its clamped edge.
+  vec2 parallax = (uMouse - 0.5) * 0.02 * amount;
 
   vec2 uvA = cover(vUv + push * eased + parallax, uPlaneSize, uImageSizeA);
   vec2 uvB = cover(vUv - push * (1.0 - eased) + parallax, uPlaneSize, uImageSizeB);
@@ -42,13 +44,21 @@ void main() {
   vec4 b = texture2D(uTextureB, uvB);
 
   float seam = smoothstep(eased - 0.35 - wave * 0.15, eased + 0.35, vUv.x * uDirection * 0.5 + 0.5);
-  vec3 color = mix(b.rgb, a.rgb, seam);
-  color = mix(color, mix(a.rgb, b.rgb, eased), 0.55);
+  vec3 blended = mix(b.rgb, a.rgb, seam);
+  blended = mix(blended, mix(a.rgb, b.rgb, eased), 0.55);
+
+  // The seam does not resolve on its own: its upper edge sits past 1.0, so at
+  // the end of the move part of the frame still carries the outgoing image,
+  // and the 0.55 mix only removes half of it. Land on each photograph exactly
+  // at the ends of the move so what is on screen is the photograph.
+  vec3 color = mix(blended, a.rgb, smoothstep(0.12, 0.0, p));
+  color = mix(color, b.rgb, smoothstep(0.88, 1.0, p));
 
   // The image de-saturates very slightly at the midpoint of the move.
   float grey = dot(color, vec3(0.299, 0.587, 0.114));
   color = mix(color, vec3(grey), amount * 0.18);
-  color += (grain(vUv * 800.0, fract(uTime * 0.5)) - 0.5) * 0.03;
+  // Grain belongs to the move as well; a still photograph should not crawl.
+  color += (grain(vUv * 800.0, fract(uTime * 0.5)) - 0.5) * 0.03 * amount;
 
   gl_FragColor = vec4(color, 1.0);
 }

@@ -99,6 +99,9 @@ function ViewerPlane({
         targetAspect.current = size.x / size.y;
 
         const first = !u.uTextureA.value || u.uTextureA.value === texture;
+        // Clicking through quickly would otherwise leave two tweens driving
+        // uProgress at once, and the frame settles wherever they cross.
+        gsap.killTweensOf(u.uProgress);
         gsap.fromTo(
           u.uProgress,
           { value: first ? 0.6 : 0 },
